@@ -26,6 +26,7 @@ Notes:
 - Bücher ohne Erscheinungsdatum (random fake?)
 
 Fragen:
+
 Ein Hauptbestandteil der Aufgabe sind Suchvorgänge; Wollen wir die in der DB oder in Python machen?
 DB wahrscheinlich performanter, Python erlaubt Spielereien wie AutoComplete-Dropdown-Listen.
 
