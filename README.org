@@ -16,3 +16,11 @@ Groups:
 	#MiLFs: René, Robert, Eugen
 	
 	#Documentation: Simon
+	
+Daten:
+https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/books.csv
+https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/tmdb_5000_movies.csv
+
+Notes:
+- Movies krass umfangreich
+- Bücher ohne Erscheinungsdatum
