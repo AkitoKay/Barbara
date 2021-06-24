@@ -32,6 +32,7 @@ Technische Fragen:
 
 Ein Hauptbestandteil der Aufgabe sind Suchvorgänge; Wollen wir die in der DB oder in Python machen?
 DB wahrscheinlich performanter, Python erlaubt Spielereien wie AutoComplete-Dropdown-Listen.
+
 Vorschlag: 
 Da auch nach Teilen von Texten gesucht werden soll sind mehrfach Funde möglich. 
 Zusätzlich zu einer Gesamtliste der ausgegebenen Funde können deren Elemente AutoComplet-DropDown-Listen befüllen. 
