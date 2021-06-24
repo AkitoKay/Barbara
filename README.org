@@ -16,11 +16,24 @@ Groups:
 	#MiLFs: René, Robert, Eugen
 	
 	#Documentation: Simon
-	
-Daten:
-https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/books.csv
-https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/tmdb_5000_movies.csv
 
+
+Daten:
+- https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/books.csv
+- https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/tmdb_5000_movies.csv
 Notes:
 - Movies krass umfangreich
-- Bücher ohne Erscheinungsdatum
+- Bücher ohne Erscheinungsdatum (random fake?)
+
+Fragen:
+Ein Hauptbestandteil der Aufgabe sind Suchvorgänge; Wollen wir die in der DB oder in Python machen?
+DB wahrscheinlich performanter, Python erlaubt Spielereien wie AutoComplete-Dropdown-Listen.
+
+Option zum Ändern, Anlegen und Löschen bringt Problem der Datenkonsistenz mit sich;
+Vieleicht doch erstmal nur die explizit geforderten Punkte abarbeiten, damit wir nicht am Ende in Zeitnot geraten. 
+Eine Erweiterung für die 'Verwaltung' würde m.e. nicht die Datenbank himself betreffen und wäre so auch im Nachhinein möglich.
+(wenn der Python Code gut ist XD)
+
+Aufbau der Metadaten für Medien: Wie weit wollen wir gehen?
+Die obigen Datensätze sind ziemlich umfangreich. Wenn wir zum Bleistift mehrere Genres haben, bräuchten
+wir eine weitere n:m Beziehung dafür... andererseits, warum auch nicht? 
