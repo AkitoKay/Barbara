@@ -21,6 +21,8 @@ Groups:
 Daten:
 - https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/books.csv
 - https://raw.githubusercontent.com/noahjett/Movie-Goodreads-Analysis/master/tmdb_5000_movies.csv
+- https://www.kaggle.com/notgibs/500-greatest-albums-of-all-time-rolling-stone
+
 Notes:
 - Movies krass umfangreich
 - Bücher ohne Erscheinungsdatum (random fake?)
