@@ -1,3 +1,18 @@
 * Zusammenfassung
 
   Hier befindet sich alles Organisatorische.
+
+
+Groups:
+	
+	#Python:
+		
+		Front-End: Flo, Daniel
+		
+		Back-End: Erik, Simon
+	
+	#Db: Markus, Anhel
+	
+	#Daddy: René
+	
+	#Documentation: Simon
