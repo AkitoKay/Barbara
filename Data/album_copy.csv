@@ -1,0 +1,501 @@
+Number,Album,Artist,NonePublisher,Year,NonePlacementId
+1,Sgt. Pepper's Lonely Hearts Club Band,The Beatles,NonePublisher,1967,NonePlacementId
+2,Pet Sounds,The Beach Boys,NonePublisher,1966,NonePlacementId
+3,Revolver,The Beatles,NonePublisher,1966,NonePlacementId
+4,Highway 61 Revisited,Bob Dylan,NonePublisher,1965,NonePlacementId
+5,Rubber Soul,The Beatles,NonePublisher,1965,NonePlacementId
+6,What's Going On,Marvin Gaye,NonePublisher,1971,NonePlacementId
+7,Exile on Main St.,The Rolling Stones,NonePublisher,1972,NonePlacementId
+8,London Calling,The Clash,NonePublisher,1979,NonePlacementId
+9,Blonde on Blonde,Bob Dylan,NonePublisher,1966,NonePlacementId
+10,"The Beatles (""The White Album"")",The Beatles,NonePublisher,1968,NonePlacementId
+11,The Sun Sessions,Elvis Presley,NonePublisher,1976,NonePlacementId
+12,Kind of Blue,Miles Davis,NonePublisher,1959,NonePlacementId
+13,The Velvet Underground & Nico,The Velvet Underground,NonePublisher,1967,NonePlacementId
+14,Abbey Road,The Beatles,NonePublisher,1969,NonePlacementId
+15,Are You Experienced,The Jimi Hendrix Experience,NonePublisher,1967,NonePlacementId
+16,Blood on the Tracks,Bob Dylan,NonePublisher,1975,NonePlacementId
+17,Nevermind,Nirvana,NonePublisher,1991,NonePlacementId
+18,Born to Run,Bruce Springsteen,NonePublisher,1975,NonePlacementId
+19,Astral Weeks,Van Morrison,NonePublisher,1968,NonePlacementId
+20,Thriller,Michael Jackson,NonePublisher,1982,NonePlacementId
+21,The Great Twenty_Eight,Chuck Berry,NonePublisher,1982,NonePlacementId
+22,The Complete Recordings,Robert Johnson,NonePublisher,1990,NonePlacementId
+23,John Lennon/Plastic Ono Band,John Lennon / Plastic Ono Band,NonePublisher,1970,NonePlacementId
+24,Innervisions,Stevie Wonder,NonePublisher,1973,NonePlacementId
+25,"Live at the Apollo, 1962",James Brown,NonePublisher,1963,NonePlacementId
+26,Rumours,Fleetwood Mac,NonePublisher,1977,NonePlacementId
+27,The Joshua Tree,U2,NonePublisher,1987,NonePlacementId
+28,Who's Next,The Who,NonePublisher,1971,NonePlacementId
+29,Led Zeppelin,Led Zeppelin,NonePublisher,1969,NonePlacementId
+30,Blue,Joni Mitchell,NonePublisher,1971,NonePlacementId
+31,Bringing It All Back Home,Bob Dylan,NonePublisher,1965,NonePlacementId
+32,Let It Bleed,The Rolling Stones,NonePublisher,1969,NonePlacementId
+33,Ramones,Ramones,NonePublisher,1976,NonePlacementId
+34,Music From Big Pink,The Band,NonePublisher,1968,NonePlacementId
+35,The Rise and Fall of Ziggy Stardust and the Spiders From Mars,David Bowie,NonePublisher,1972,NonePlacementId
+36,Tapestry,Carole King,NonePublisher,1971,NonePlacementId
+37,Hotel California,Eagles,NonePublisher,1976,NonePlacementId
+38,The Anthology,Muddy Waters,NonePublisher,2001,NonePlacementId
+39,Please Please Me,The Beatles,NonePublisher,1963,NonePlacementId
+40,Forever Changes,Love,NonePublisher,1967,NonePlacementId
+41,Never Mind the Bollocks Here's the Sex Pistols,Sex Pistols,NonePublisher,1977,NonePlacementId
+42,The Doors,The Doors,NonePublisher,1967,NonePlacementId
+43,The Dark Side of the Moon,Pink Floyd,NonePublisher,1973,NonePlacementId
+44,Horses,Patti Smith,NonePublisher,1975,NonePlacementId
+45,"The Band (""The Brown Album"")",The Band,NonePublisher,1969,NonePlacementId
+46,Legend: The Best of Bob Marley and The Wailers,Bob Marley & The Wailers,NonePublisher,1984,NonePlacementId
+47,A Love Supreme,John Coltrane,NonePublisher,1965,NonePlacementId
+48,It Takes a Nation of Millions to Hold Us Back,Public Enemy,NonePublisher,1988,NonePlacementId
+49,At Fillmore East,The Allman Brothers Band,NonePublisher,1971,NonePlacementId
+50,Here's Little Richard,Little Richard,NonePublisher,1957,NonePlacementId
+51,Bridge Over Troubled Water,Simon & Garfunkel,NonePublisher,1970,NonePlacementId
+52,Greatest Hits,Al Green,NonePublisher,1975,NonePlacementId
+53,Meet The Beatles!,The Beatles,NonePublisher,1964,NonePlacementId
+54,The Birth of Soul,Ray Charles,NonePublisher,1991,NonePlacementId
+55,Electric Ladyland,The Jimi Hendrix Experience,NonePublisher,1968,NonePlacementId
+56,Elvis Presley,Elvis Presley,NonePublisher,1956,NonePlacementId
+57,Songs in the Key of Life,Stevie Wonder,NonePublisher,1976,NonePlacementId
+58,Beggars Banquet,The Rolling Stones,NonePublisher,1968,NonePlacementId
+59,Chronicle: The 20 Greatest Hits,Creedence Clearwater Revival,NonePublisher,1976,NonePlacementId
+60,Trout Mask Replica,Captain Beefheart & His Magic Band,NonePublisher,1969,NonePlacementId
+61,Greatest Hits,Sly & The Family Stone,NonePublisher,1970,NonePlacementId
+62,Appetite for Destruction,Guns N' Roses,NonePublisher,1987,NonePlacementId
+63,Achtung Baby,U2,NonePublisher,1991,NonePlacementId
+64,Sticky Fingers,The Rolling Stones,NonePublisher,1971,NonePlacementId
+65,Back to Mono (1958-1969),Phil Spector,NonePublisher,1991,NonePlacementId
+66,Moondance,Van Morrison,NonePublisher,1970,NonePlacementId
+67,Kid A,Radiohead,NonePublisher,2000,NonePlacementId
+68,Off the Wall,Michael Jackson,NonePublisher,1979,NonePlacementId
+69,[Led Zeppelin IV],Led Zeppelin,NonePublisher,1971,NonePlacementId
+70,The Stranger,Billy Joel,NonePublisher,1977,NonePlacementId
+71,Graceland,Paul Simon,NonePublisher,1986,NonePlacementId
+72,Superfly,Curtis Mayfield,NonePublisher,1972,NonePlacementId
+73,Physical Graffiti,Led Zeppelin,NonePublisher,1975,NonePlacementId
+74,After the Gold Rush,Neil Young,NonePublisher,1970,NonePlacementId
+75,Star Time,James Brown,NonePublisher,1991,NonePlacementId
+76,Purple Rain,Prince and the Revolution,NonePublisher,1984,NonePlacementId
+77,Back in Black,AC/DC,NonePublisher,1980,NonePlacementId
+78,Otis Blue: Otis Redding Sings Soul,Otis Redding,NonePublisher,1965,NonePlacementId
+79,Led Zeppelin II,Led Zeppelin,NonePublisher,1969,NonePlacementId
+80,Imagine,John Lennon,NonePublisher,1971,NonePlacementId
+81,The Clash,The Clash,NonePublisher,1977,NonePlacementId
+82,Harvest,Neil Young,NonePublisher,1972,NonePlacementId
+83,Axis: Bold as Love,The Jimi Hendrix Experience,NonePublisher,1967,NonePlacementId
+84,I Never Loved a Man the Way I Love You,Aretha Franklin,NonePublisher,1967,NonePlacementId
+85,Lady Soul,Aretha Franklin,NonePublisher,1968,NonePlacementId
+86,Born in the U.S.A.,Bruce Springsteen,NonePublisher,1984,NonePlacementId
+87,The Wall,Pink Floyd,NonePublisher,1979,NonePlacementId
+88,At Folsom Prison,Johnny Cash,NonePublisher,1968,NonePlacementId
+89,Dusty in Memphis,Dusty Springfield,NonePublisher,1969,NonePlacementId
+90,Talking Book,Stevie Wonder,NonePublisher,1972,NonePlacementId
+91,Goodbye Yellow Brick Road,Elton John,NonePublisher,1973,NonePlacementId
+92,20 Golden Greats,Buddy Holly,NonePublisher,1978,NonePlacementId
+93,"Sign ""Peace"" the Times",Prince,NonePublisher,1987,NonePlacementId
+94,40 Greatest Hits,Hank Williams,NonePublisher,1984,NonePlacementId
+95,Bitches Brew,Miles Davis,NonePublisher,1970,NonePlacementId
+96,Tommy,The Who,NonePublisher,1969,NonePlacementId
+97,The Freewheelin' Bob Dylan,Bob Dylan,NonePublisher,1963,NonePlacementId
+98,This Year's Model,Elvis Costello,NonePublisher,1978,NonePlacementId
+99,There's a Riot Goin' On,Sly & The Family Stone,NonePublisher,1971,NonePlacementId
+100,Odessey and Oracle,The Zombies,NonePublisher,1968,NonePlacementId
+101,In the Wee Small Hours,Frank Sinatra,NonePublisher,1955,NonePlacementId
+102,Fresh Cream,Cream,NonePublisher,1966,NonePlacementId
+103,Giant Steps,John Coltrane,NonePublisher,1959,NonePlacementId
+104,Sweet Baby James,James Taylor,NonePublisher,1970,NonePlacementId
+105,Modern Sounds in Country and Western Music,Ray Charles,NonePublisher,1962,NonePlacementId
+106,Rocket to Russia,Ramones,NonePublisher,1977,NonePlacementId
+107,Portrait of a Legend 1951-1964,Sam Cooke,NonePublisher,2003,NonePlacementId
+108,Hunky Dory,David Bowie,NonePublisher,1971,NonePlacementId
+109,Aftermath,The Rolling Stones,NonePublisher,1966,NonePlacementId
+110,Loaded,The Velvet Underground,NonePublisher,1970,NonePlacementId
+111,The Bends,Radiohead,NonePublisher,1995,NonePlacementId
+112,If You Can Believe Your Eyes and Ears,The Mamas and the Papas,NonePublisher,1966,NonePlacementId
+113,Court and Spark,Joni Mitchell,NonePublisher,1974,NonePlacementId
+114,Disraeli Gears,Cream,NonePublisher,1967,NonePlacementId
+115,The Who Sell Out,The Who,NonePublisher,1967,NonePlacementId
+116,Out of Our Heads,The Rolling Stones,NonePublisher,1965,NonePlacementId
+117,Layla and Other Assorted Love Songs,Derek and the Dominos,NonePublisher,1970,NonePlacementId
+118,Late Registration,Kanye West,NonePublisher,2005,NonePlacementId
+119,At Last!,Etta James,NonePublisher,1960,NonePlacementId
+120,Sweetheart of the Rodeo,The Byrds,NonePublisher,1968,NonePlacementId
+121,Stand!,Sly & The Family Stone,NonePublisher,1969,NonePlacementId
+122,The Harder They Come,Various Artists,NonePublisher,1972,NonePlacementId
+123,Raising Hell,Run D.M.C.,NonePublisher,1986,NonePlacementId
+124,Moby Grape,Moby Grape,NonePublisher,1967,NonePlacementId
+125,Pearl,Janis Joplin,NonePublisher,1971,NonePlacementId
+126,Catch a Fire,The Wailers,NonePublisher,1973,NonePlacementId
+127,Younger Than Yesterday,The Byrds,NonePublisher,1967,NonePlacementId
+128,Raw Power,Iggy and The Stooges,NonePublisher,1973,NonePlacementId
+129,Remain in Light,Talking Heads,NonePublisher,1980,NonePlacementId
+130,Marquee Moon,Television,NonePublisher,1977,NonePlacementId
+131,Paranoid,Black Sabbath,NonePublisher,1970,NonePlacementId
+132,Saturday Night Fever: The Original Movie Sound Track,Various Artists,NonePublisher,1977,NonePlacementId
+133,"The Wild, the Innocent & the E Street Shuffle",Bruce Springsteen,NonePublisher,1973,NonePlacementId
+134,Ready to Die,The Notorious B.I.G.,NonePublisher,1994,NonePlacementId
+135,Slanted and Enchanted,Pavement,NonePublisher,1992,NonePlacementId
+136,Greatest Hits,Elton John,NonePublisher,1974,NonePlacementId
+137,Tim,The Replacements,NonePublisher,1985,NonePlacementId
+138,The Chronic,Dr. Dre,NonePublisher,1992,NonePlacementId
+139,Rejuvenation,The Meters,NonePublisher,1974,NonePlacementId
+140,Parallel Lines,Blondie,NonePublisher,1978,NonePlacementId
+141,Live at the Regal,B.B. King,NonePublisher,1965,NonePlacementId
+142,A Christmas Gift for You From Phil Spector,Phil Spector,NonePublisher,1963,NonePlacementId
+143,Gris-Gris,"Dr. John, the Night Tripper",NonePublisher,1968,NonePlacementId
+144,Straight Outta Compton,N.W.A,NonePublisher,1988,NonePlacementId
+145,Aja,Steely Dan,NonePublisher,1977,NonePlacementId
+146,Surrealistic Pillow,Jefferson Airplane,NonePublisher,1967,NonePlacementId
+147,Deja vu,"Crosby, Stills, Nash & Young",NonePublisher,1970,NonePlacementId
+148,Houses of the Holy,Led Zeppelin,NonePublisher,1973,NonePlacementId
+149,Santana,Santana,NonePublisher,1969,NonePlacementId
+150,Darkness on the Edge of Town,Bruce Springsteen,NonePublisher,1978,NonePlacementId
+151,Funeral,Arcade Fire,NonePublisher,2004,NonePlacementId
+152,The B 52's / Play Loud,The B 52's,NonePublisher,1979,NonePlacementId
+153,The Low End Theory,A Tribe Called Quest,NonePublisher,1991,NonePlacementId
+154,Moanin' in the Moonlight,Howlin' Wolf,NonePublisher,1958,NonePlacementId
+155,Pretenders,Pretenders,NonePublisher,1980,NonePlacementId
+156,Paul's Boutique,Beastie Boys,NonePublisher,1989,NonePlacementId
+157,Closer,Joy Division,NonePublisher,1980,NonePlacementId
+158,Captain Fantastic and the Brown Dirt Cowboy,Elton John,NonePublisher,1975,NonePlacementId
+159,Alive!,KISS,NonePublisher,1975,NonePlacementId
+160,Electric Warrior,T. Rex,NonePublisher,1971,NonePlacementId
+161,The Dock of the Bay,Otis Redding,NonePublisher,1968,NonePlacementId
+162,OK Computer,Radiohead,NonePublisher,1997,NonePlacementId
+163,1999,Prince,NonePublisher,1982,NonePlacementId
+164,The Very Best of Linda Ronstadt,Linda Ronstadt,NonePublisher,2002,NonePlacementId
+165,Let's Get It On,Marvin Gaye,NonePublisher,1973,NonePlacementId
+166,Imperial Bedroom,Elvis Costello & The Attractions,NonePublisher,1982,NonePlacementId
+167,Master of Puppets,Metallica,NonePublisher,1986,NonePlacementId
+168,My Aim Is True,Elvis Costello,NonePublisher,1977,NonePlacementId
+169,Exodus,Bob Marley & The Wailers,NonePublisher,1977,NonePlacementId
+170,Live at Leeds,The Who,NonePublisher,1970,NonePlacementId
+171,The Notorious Byrd Brothers,The Byrds,NonePublisher,1968,NonePlacementId
+172,Every Picture Tells a Story,Rod Stewart,NonePublisher,1971,NonePlacementId
+173,Something/Anything?,Todd Rundgren,NonePublisher,1972,NonePlacementId
+174,Desire,Bob Dylan,NonePublisher,1976,NonePlacementId
+175,Close to You,Carpenters,NonePublisher,1970,NonePlacementId
+176,Rocks,Aerosmith,NonePublisher,1976,NonePlacementId
+177,One Nation Under a Groove,Funkadelic,NonePublisher,1978,NonePlacementId
+178,The Anthology: 1961-1977,Curtis Mayfield and The Impressions,NonePublisher,1992,NonePlacementId
+179,The Definitive Collection,ABBA,NonePublisher,2001,NonePlacementId
+180,"The Rolling Stones, Now!",The Rolling Stones,NonePublisher,1965,NonePlacementId
+181,Natty Dread,Bob Marley & The Wailers,NonePublisher,1974,NonePlacementId
+182,Fleetwood Mac,Fleetwood Mac,NonePublisher,1975,NonePlacementId
+183,Red Headed Stranger,Willie Nelson,NonePublisher,1975,NonePlacementId
+184,The Immaculate Collection,Madonna,NonePublisher,1990,NonePlacementId
+185,The Stooges,The Stooges,NonePublisher,1969,NonePlacementId
+186,Fresh,Sly & The Family Stone,NonePublisher,1973,NonePlacementId
+187,So,Peter Gabriel,NonePublisher,1986,NonePlacementId
+188,Buffalo Springfield Again,Buffalo Springfield,NonePublisher,1967,NonePlacementId
+189,Happy Trails,Quicksilver Messenger Service,NonePublisher,1969,NonePlacementId
+190,From Elvis in Memphis,Elvis Presley,NonePublisher,1969,NonePlacementId
+191,Fun House,The Stooges,NonePublisher,1970,NonePlacementId
+192,The Gilded Palace of Sin,The Flying Burrito Brothers,NonePublisher,1969,NonePlacementId
+193,Dookie,Green Day,NonePublisher,1994,NonePlacementId
+194,Transformer,Lou Reed,NonePublisher,1972,NonePlacementId
+195,"Blues Breakers With Eric Clapton (""The Beano Album"")",John Mayall & The Bluesbreakers,NonePublisher,1966,NonePlacementId
+196,"Nuggets: Original Artyfacts From the First Psychedelic Era, 1965-1968",Various Artists,NonePublisher,1998,NonePlacementId
+197,Murmur,R.E.M.,NonePublisher,1983,NonePlacementId
+198,The Best of Little Walter,Little Walter,NonePublisher,1967,NonePlacementId
+199,Is This It,The Strokes,NonePublisher,2001,NonePlacementId
+200,Highway to Hell,AC/DC,NonePublisher,1979,NonePlacementId
+201,The Downward Spiral,Nine Inch Nails,NonePublisher,1994,NonePlacementId
+202,"Parsley, Sage, Rosemary and Thyme",Simon & Garfunkel,NonePublisher,1966,NonePlacementId
+203,Bad,Michael Jackson,NonePublisher,1987,NonePlacementId
+204,Modern Times,Bob Dylan,NonePublisher,2006,NonePlacementId
+205,Wheels of Fire,Cream,NonePublisher,1968,NonePlacementId
+206,Dirty Mind,Prince,NonePublisher,1980,NonePlacementId
+207,Abraxas,Santana,NonePublisher,1970,NonePlacementId
+208,Tea for the Tillerman,Cat Stevens,NonePublisher,1970,NonePlacementId
+209,Ten,Pearl Jam,NonePublisher,1991,NonePlacementId
+210,Everybody Knows This Is Nowhere,Neil Young & Crazy Horse,NonePublisher,1969,NonePlacementId
+211,Wish You Were Here,Pink Floyd,NonePublisher,1975,NonePlacementId
+212,Crooked Rain Crooked Rain,Pavement,NonePublisher,1994,NonePlacementId
+213,Tattoo You,The Rolling Stones,NonePublisher,1981,NonePlacementId
+214,Proud Mary: The Best of Ike and Tina Turner,Ike & Tina Turner,NonePublisher,1991,NonePlacementId
+215,New York Dolls,New York Dolls,NonePublisher,1973,NonePlacementId
+216,Bo Diddley / Go Bo Diddley,Bo Diddley,NonePublisher,1986,NonePlacementId
+217,Two Steps From the Blues,"Bobby ""Blue"" Bland",NonePublisher,1961,NonePlacementId
+218,The Queen Is Dead,The Smiths,NonePublisher,1986,NonePlacementId
+219,Licensed to Ill,Beastie Boys,NonePublisher,1986,NonePlacementId
+220,Look-Ka Py Py,The Meters,NonePublisher,1970,NonePlacementId
+221,Loveless,My Bloody Valentine,NonePublisher,1991,NonePlacementId
+222,New Orleans Piano,Professor Longhair,NonePublisher,1972,NonePlacementId
+223,War,U2,NonePublisher,1983,NonePlacementId
+224,The Neil Diamond Collection,Neil Diamond,NonePublisher,1999,NonePlacementId
+225,American Idiot,Green Day,NonePublisher,2004,NonePlacementId
+226,Nebraska,Bruce Springsteen,NonePublisher,1982,NonePlacementId
+227,Doolittle,Pixies,NonePublisher,1989,NonePlacementId
+228,Paid in Full,Eric B. & Rakim,NonePublisher,1987,NonePlacementId
+229,Toys in the Attic,Aerosmith,NonePublisher,1975,NonePlacementId
+230,Nick of Time,Bonnie Raitt,NonePublisher,1989,NonePlacementId
+231,A Night at the Opera,Queen,NonePublisher,1975,NonePlacementId
+232,The Kink Kronikles,The Kinks,NonePublisher,1972,NonePlacementId
+233,Mr. Tambourine Man,The Byrds,NonePublisher,1965,NonePlacementId
+234,Bookends,Simon & Garfunkel,NonePublisher,1968,NonePlacementId
+235,The Ultimate Collection,Patsy Cline,NonePublisher,2000,NonePlacementId
+236,Mr. Excitement!,Jackie Wilson,NonePublisher,1992,NonePlacementId
+237,My Generation,The Who,NonePublisher,1965,NonePlacementId
+238,Howlin' Wolf,Howlin' Wolf,NonePublisher,1962,NonePlacementId
+239,Like a Prayer,Madonna,NonePublisher,1989,NonePlacementId
+240,Can't Buy a Thrill,Steely Dan,NonePublisher,1972,NonePlacementId
+241,Let It Be,The Replacements,NonePublisher,1984,NonePlacementId
+242,Run D.M.C.,Run D.M.C.,NonePublisher,1984,NonePlacementId
+243,Black Sabbath,Black Sabbath,NonePublisher,1970,NonePlacementId
+244,The Marshall Mathers LP,Eminem,NonePublisher,2000,NonePlacementId
+245,All Killer No Filler! The Jerry Lee Lewis Anthology,Jerry Lee Lewis,NonePublisher,1993,NonePlacementId
+246,Freak Out!,The Mothers of Invention,NonePublisher,1966,NonePlacementId
+247,Live/Dead,The Grateful Dead,NonePublisher,1969,NonePlacementId
+248,The Shape of Jazz to Come,Ornette Coleman,NonePublisher,1959,NonePlacementId
+249,Automatic for the People,R.E.M.,NonePublisher,1992,NonePlacementId
+250,Reasonable Doubt,Jay Z,NonePublisher,1996,NonePlacementId
+251,Low,David Bowie,NonePublisher,1977,NonePlacementId
+252,The Blueprint,Jay Z,NonePublisher,2001,NonePlacementId
+253,The River,Bruce Springsteen,NonePublisher,1980,NonePlacementId
+254,Complete & Unbelievable: The Otis Redding Dictionary of Soul,Otis Redding,NonePublisher,1966,NonePlacementId
+255,"Metallica (""The Black Album"")",Metallica,NonePublisher,1991,NonePlacementId
+256,Trans Europa Express,Kraftwerk,NonePublisher,1977,NonePlacementId
+257,Whitney Houston,Whitney Houston,NonePublisher,1985,NonePlacementId
+258,The Kinks Are The Village Green Preservation Society,The Kinks,NonePublisher,1968,NonePlacementId
+259,The Velvet Rope,Janet,NonePublisher,1997,NonePlacementId
+260,Stardust,Willie Nelson,NonePublisher,1978,NonePlacementId
+261,American Beauty,Grateful Dead,NonePublisher,1970,NonePlacementId
+262,"Crosby, Stills & Nash","Crosby, Stills & Nash",NonePublisher,1969,NonePlacementId
+263,Tracy Chapman,Tracy Chapman,NonePublisher,1988,NonePlacementId
+264,Workingman's Dead,Grateful Dead,NonePublisher,1970,NonePlacementId
+265,The Genius of Ray Charles,Ray Charles,NonePublisher,1959,NonePlacementId
+266,Child Is Father to the Man,"Blood, Sweat & Tears",NonePublisher,1968,NonePlacementId
+267,Quadrophenia,The Who,NonePublisher,1973,NonePlacementId
+268,Paul Simon,Paul Simon,NonePublisher,1972,NonePlacementId
+269,Psychocandy,The Jesus and Mary Chain,NonePublisher,1985,NonePlacementId
+270,Some Girls,The Rolling Stones,NonePublisher,1978,NonePlacementId
+271,The Beach Boys Today!,The Beach Boys,NonePublisher,1965,NonePlacementId
+272,Dig Me Out,Sleater Kinney,NonePublisher,1997,NonePlacementId
+273,Going to a Go-Go,Smokey Robinson & The Miracles,NonePublisher,1966,NonePlacementId
+274,Nightbirds,LaBelle,NonePublisher,1974,NonePlacementId
+275,The Slim Shady LP,Eminem,NonePublisher,1999,NonePlacementId
+276,Mothership Connection,Parliament,NonePublisher,1975,NonePlacementId
+277,Rhythm Nation 1814,Janet Jackson,NonePublisher,1989,NonePlacementId
+278,Anthology of American Folk Music,Various,NonePublisher,1997,NonePlacementId
+279,Aladdin Sane,David Bowie,NonePublisher,1973,NonePlacementId
+280,All That You Can't Leave Behind,U2,NonePublisher,2000,NonePlacementId
+281,My Life,Mary J. Blige,NonePublisher,1994,NonePlacementId
+282,Folk Singer,Muddy Waters,NonePublisher,1964,NonePlacementId
+283,Can't Get Enough,Barry White,NonePublisher,1974,NonePlacementId
+284,The Cars,The Cars,NonePublisher,1978,NonePlacementId
+285,Music of My Mind,Stevie Wonder,NonePublisher,1972,NonePlacementId
+286,I'm Still in Love With You,Al Green,NonePublisher,1972,NonePlacementId
+287,Los Angeles,X,NonePublisher,1980,NonePlacementId
+288,Anthem of the Sun,Grateful Dead,NonePublisher,1968,NonePlacementId
+289,Something Else by The Kinks,The Kinks,NonePublisher,1967,NonePlacementId
+290,Call Me,Al Green,NonePublisher,1973,NonePlacementId
+291,Talking Heads: 77,Talking Heads,NonePublisher,1977,NonePlacementId
+292,The Basement Tapes,Bob Dylan and the Band,NonePublisher,1975,NonePlacementId
+293,White Light/White Heat,The Velvet Underground,NonePublisher,1968,NonePlacementId
+294,Kick Out the Jams,MC5,NonePublisher,1969,NonePlacementId
+295,Songs of Love and Hate,Leonard Cohen,NonePublisher,1970,NonePlacementId
+296,Meat Is Murder,The Smiths,NonePublisher,1985,NonePlacementId
+297,We're Only in It for the Money,The Mothers of Invention,NonePublisher,1968,NonePlacementId
+298,The College Dropout,Kanye West,NonePublisher,2003,NonePlacementId
+299,Weezer (Blue Album),Weezer,NonePublisher,1994,NonePlacementId
+300,Master of Reality,Black Sabbath,NonePublisher,1971,NonePlacementId
+301,Coat of Many Colors,Dolly Parton,NonePublisher,1971,NonePlacementId
+302,Fear of a Black Planet,Public Enemy,NonePublisher,1990,NonePlacementId
+303,John Wesley Harding,Bob Dylan,NonePublisher,1967,NonePlacementId
+304,Grace,Jeff Buckley,NonePublisher,1994,NonePlacementId
+305,Car Wheels on a Gravel Road,Lucinda Williams,NonePublisher,1998,NonePlacementId
+306,Odelay,Beck,NonePublisher,1996,NonePlacementId
+307,A Hard Day's Night,The Beatles,NonePublisher,1964,NonePlacementId
+308,Songs for Swingin' Lovers!,Frank Sinatra,NonePublisher,1956,NonePlacementId
+309,Willy and the Poor Boys,Creedence Clearwater Revival,NonePublisher,1969,NonePlacementId
+310,Blood Sugar Sex Magik,Red Hot Chili Peppers,NonePublisher,1991,NonePlacementId
+311,The Sun Records Collection,Various,NonePublisher,1994,NonePlacementId
+312,Nothing's Shocking,Jane's Addiction,NonePublisher,1988,NonePlacementId
+313,MTV Unplugged in New York,Nirvana,NonePublisher,1994,NonePlacementId
+314,The Miseducation of Lauryn Hill,Lauryn Hill,NonePublisher,1998,NonePlacementId
+315,Damn the Torpedoes,Tom Petty and the Heartbreakers,NonePublisher,1979,NonePlacementId
+316,The Velvet Underground,The Velvet Underground,NonePublisher,1969,NonePlacementId
+317,Surfer Rosa,Pixies,NonePublisher,1988,NonePlacementId
+318,Back Stabbers,The O'Jays,NonePublisher,1972,NonePlacementId
+319,Burnin',The Wailers,NonePublisher,1973,NonePlacementId
+320,Amnesiac,Radiohead,NonePublisher,2001,NonePlacementId
+321,Pink Moon,Nick Drake,NonePublisher,1972,NonePlacementId
+322,Sail Away,Randy Newman,NonePublisher,1972,NonePlacementId
+323,Ghost in the Machine,The Police,NonePublisher,1981,NonePlacementId
+324,Station to Station,David Bowie,NonePublisher,1976,NonePlacementId
+325,Slowhand,Eric Clapton,NonePublisher,1977,NonePlacementId
+326,Disintegration,The Cure,NonePublisher,1989,NonePlacementId
+327,Exile in Guyville,Liz Phair,NonePublisher,1993,NonePlacementId
+328,Daydream Nation,Sonic Youth,NonePublisher,1988,NonePlacementId
+329,In the Jungle Groove,James Brown,NonePublisher,1986,NonePlacementId
+330,Tonight's the Night,Neil Young,NonePublisher,1975,NonePlacementId
+331,Help!,The Beatles,NonePublisher,1965,NonePlacementId
+332,Shoot Out the Lights,Richard & Linda Thompson,NonePublisher,1982,NonePlacementId
+333,Wild Gift,X,NonePublisher,1981,NonePlacementId
+334,Squeezing Out Sparks,Graham Parker & The Rumour,NonePublisher,1979,NonePlacementId
+335,Superunknown,Soundgarden,NonePublisher,1994,NonePlacementId
+336,In Rainbows,Radiohead,NonePublisher,2007,NonePlacementId
+337,Aqualung,Jethro Tull,NonePublisher,1971,NonePlacementId
+338,Cheap Thrills,Big Brother & the Holding Company,NonePublisher,1968,NonePlacementId
+339,The Heart of Saturday Night,Tom Waits,NonePublisher,1974,NonePlacementId
+340,Damaged,Black Flag,NonePublisher,1981,NonePlacementId
+341,Play,Moby,NonePublisher,1999,NonePlacementId
+342,Violator,Depeche Mode,NonePublisher,1990,NonePlacementId
+343,Bat Out of Hell,Meat Loaf,NonePublisher,1977,NonePlacementId
+344,Berlin,Lou Reed,NonePublisher,1973,NonePlacementId
+345,Stop Making Sense,Talking Heads,NonePublisher,1984,NonePlacementId
+346,3 Feet High and Rising,De La Soul,NonePublisher,1989,NonePlacementId
+347,The Piper at the Gates of Dawn,Pink Floyd,NonePublisher,1967,NonePlacementId
+348,Muddy Waters at Newport 1960,Muddy Waters,NonePublisher,1960,NonePlacementId
+349,The Black Album,Jay Z,NonePublisher,2003,NonePlacementId
+350,Roger the Engineer,The Yardbirds,NonePublisher,1966,NonePlacementId
+351,Rust Never Sleeps,Neil Young & Crazy Horse,NonePublisher,1979,NonePlacementId
+352,Brothers in Arms,Dire Straits,NonePublisher,1985,NonePlacementId
+353,My Beautiful Dark Twisted Fantasy,Kanye West,NonePublisher,2010,NonePlacementId
+354,52nd Street,Billy Joel,NonePublisher,1978,NonePlacementId
+355,Having a Rave Up,The Yardbirds,NonePublisher,1965,NonePlacementId
+356,12 Songs,Randy Newman,NonePublisher,1970,NonePlacementId
+357,Between the Buttons,The Rolling Stones,NonePublisher,1967,NonePlacementId
+358,Sketches of Spain,Miles Davis,NonePublisher,1960,NonePlacementId
+359,Honky Château,Elton John,NonePublisher,1972,NonePlacementId
+360,Singles Going Steady,Buzzcocks,NonePublisher,1979,NonePlacementId
+361,Stankonia,OutKast,NonePublisher,2000,NonePlacementId
+362,Siamese Dream,The Smashing Pumpkins,NonePublisher,1993,NonePlacementId
+363,Substance 1987,New Order,NonePublisher,1987,NonePlacementId
+364,L.A. Woman,The Doors,NonePublisher,1971,NonePlacementId
+365,Rage Against the Machine,Rage Against the Machine,NonePublisher,1992,NonePlacementId
+366,American Recordings,Johnny Cash,NonePublisher,1994,NonePlacementId
+367,Ray of Light,Madonna,NonePublisher,1998,NonePlacementId
+368,Eagles,Eagles,NonePublisher,1972,NonePlacementId
+369,Louder Than Bombs,The Smiths,NonePublisher,1987,NonePlacementId
+370,Mott,Mott the Hoople,NonePublisher,1973,NonePlacementId
+371,"Whatever People Say I Am, That's What I'm Not",Arctic Monkeys,NonePublisher,2006,NonePlacementId
+372,Reggatta de Blanc,The Police,NonePublisher,1979,NonePlacementId
+373,Volunteers,Jefferson Airplane,NonePublisher,1969,NonePlacementId
+374,Siren,Roxy Music,NonePublisher,1975,NonePlacementId
+375,Late for the Sky,Jackson Browne,NonePublisher,1974,NonePlacementId
+376,Post,Bjork,NonePublisher,1995,NonePlacementId
+377,The Ultimate Collection: 1948-1990,John Lee Hooker,NonePublisher,1991,NonePlacementId
+378,(What's the Story) Morning Glory?,Oasis,NonePublisher,1995,NonePlacementId
+379,CrazySexyCool,TLC,NonePublisher,1994,NonePlacementId
+380,Funky Kingston,Toots & The Maytals,NonePublisher,1973,NonePlacementId
+381,The Smile Sessions,The Beach Boys,NonePublisher,2011,NonePlacementId
+382,The Modern Lovers,The Modern Lovers,NonePublisher,1976,NonePlacementId
+383,More Songs About Buildings and Food,Talking Heads,NonePublisher,1978,NonePlacementId
+384,A Quick One,The Who,NonePublisher,1966,NonePlacementId
+385,"""Love and Theft""",Bob Dylan,NonePublisher,2001,NonePlacementId
+386,Pretzel Logic,Steely Dan,NonePublisher,1974,NonePlacementId
+387,Enter the Wu_Tang: 36 Chambers,Wu Tang Clan,NonePublisher,1993,NonePlacementId
+388,The Indestructible Beat of Soweto,Various Artists,NonePublisher,1985,NonePlacementId
+389,The End of the Innocence,Don Henley,NonePublisher,1989,NonePlacementId
+390,Elephant,The White Stripes,NonePublisher,2003,NonePlacementId
+391,The Pretender,Jackson Browne,NonePublisher,1976,NonePlacementId
+392,Let It Be,The Beatles,NonePublisher,1970,NonePlacementId
+393,Kala,M.I.A.,NonePublisher,2007,NonePlacementId
+394,Good Old Boys,Randy Newman,NonePublisher,1974,NonePlacementId
+395,Sound of Silver,LCD Soundsystem,NonePublisher,2007,NonePlacementId
+396,For Your Pleasure,Roxy Music,NonePublisher,1973,NonePlacementId
+397,Blue Lines,Massive Attack,NonePublisher,1991,NonePlacementId
+398,Eliminator,ZZ Top,NonePublisher,1983,NonePlacementId
+399,Rain Dogs,Tom Waits,NonePublisher,1985,NonePlacementId
+400,Anthology: The Best of The Temptations,The Temptations,NonePublisher,1995,NonePlacementId
+401,Californication,Red Hot Chili Peppers,NonePublisher,1999,NonePlacementId
+402,Illmatic,Nas,NonePublisher,1994,NonePlacementId
+403,(pronounced 'leh-'nerd 'skin-'nerd),Lynyrd Skynyrd,NonePublisher,1973,NonePlacementId
+404,Dr. John's Gumbo,Dr. John,NonePublisher,1972,NonePlacementId
+405,Radio City,Big Star,NonePublisher,1974,NonePlacementId
+406,Rid of Me,PJ Harvey,NonePublisher,1993,NonePlacementId
+407,Sandinista!,The Clash,NonePublisher,1980,NonePlacementId
+408,I Do Not Want What I Haven't Got,Sinead O'Connor,NonePublisher,1989,NonePlacementId
+409,Strange Days,The Doors,NonePublisher,1967,NonePlacementId
+410,Time Out of Mind,Bob Dylan,NonePublisher,1997,NonePlacementId
+411,461 Ocean Boulevard,Eric Clapton,NonePublisher,1974,NonePlacementId
+412,Pink Flag,Wire,NonePublisher,1977,NonePlacementId
+413,Double Nickels on the Dime,Minutemen,NonePublisher,1984,NonePlacementId
+414,Beauty and the Beat,The Go Go's,NonePublisher,1981,NonePlacementId
+415,Van Halen,Van Halen,NonePublisher,1978,NonePlacementId
+416,Mule Variations,Tom Waits,NonePublisher,1999,NonePlacementId
+417,Boy,U2,NonePublisher,1980,NonePlacementId
+418,Band on the Run,Paul McCartney & Wings,NonePublisher,1973,NonePlacementId
+419,Dummy,Portishead,NonePublisher,1994,NonePlacementId
+420,"The ""Chirping"" Crickets",The Crickets,NonePublisher,1957,NonePlacementId
+421,"The Best of the Girl Groups, Volume 1",Various Artists,NonePublisher,1990,NonePlacementId
+422,Presenting the Fabulous Ronettes Featuring Veronica,The Ronettes,NonePublisher,1963,NonePlacementId
+423,Anthology,Diana Ross & The Supremes,NonePublisher,2001,NonePlacementId
+424,The Rising,Bruce Springsteen,NonePublisher,2002,NonePlacementId
+425,Grievous Angel,Gram Parsons,NonePublisher,1974,NonePlacementId
+426,Cheap Trick at Budokan,Cheap Trick,NonePublisher,1978,NonePlacementId
+427,Sleepless,Peter Wolf,NonePublisher,2002,NonePlacementId
+428,Outlandos d'Amour,The Police,NonePublisher,1978,NonePlacementId
+429,Another Green World,Brian Eno,NonePublisher,1975,NonePlacementId
+430,Vampire Weekend,Vampire Weekend,NonePublisher,2007,NonePlacementId
+431,"Stories From the City, Stories From the Sea",PJ Harvey,NonePublisher,2000,NonePlacementId
+432,Here Come the Warm Jets,Brian Eno,NonePublisher,1973,NonePlacementId
+433,All Things Must Pass,George Harrison,NonePublisher,1970,NonePlacementId
+434,#1 Record,Big Star,NonePublisher,1972,NonePlacementId
+435,In Utero,Nirvana,NonePublisher,1993,NonePlacementId
+436,Sea Change,Beck,NonePublisher,2002,NonePlacementId
+437,Tha Carter III,Lil Wayne,NonePublisher,2008,NonePlacementId
+438,Boys Don't Cry,The Cure,NonePublisher,1979,NonePlacementId
+439,"Live at the Harlem Square Club, 1963",Sam Cooke,NonePublisher,1985,NonePlacementId
+440,Rum Sodomy & the Lash,The Pogues,NonePublisher,1985,NonePlacementId
+441,Suicide,Suicide,NonePublisher,1977,NonePlacementId
+442,Q: Are We Not Men? A: We Are Devo!,DEVO,NonePublisher,1978,NonePlacementId
+443,In Color,Cheap Trick,NonePublisher,1977,NonePlacementId
+444,The World Is a Ghetto,War,NonePublisher,1972,NonePlacementId
+445,Fly Like an Eagle,Steve Miller Band,NonePublisher,1976,NonePlacementId
+446,Back in the USA,MC5,NonePublisher,1970,NonePlacementId
+447,Getz / Gilberto,Stan Getz / Joao Gilberto featuring Antonio Carlos Jobim,NonePublisher,1964,NonePlacementId
+448,Synchronicity,The Police,NonePublisher,1983,NonePlacementId
+449,Third/Sister Lovers,Big Star,NonePublisher,1978,NonePlacementId
+450,For Everyman,Jackson Browne,NonePublisher,1973,NonePlacementId
+451,Back to Black,Amy Winehouse,NonePublisher,2006,NonePlacementId
+452,John Prine,John Prine,NonePublisher,1971,NonePlacementId
+453,Strictly Business,EPMD,NonePublisher,1987,NonePlacementId
+454,Love It to Death,Alice Cooper,NonePublisher,1971,NonePlacementId
+455,How Will the Wolf Survive?,Los Lobos,NonePublisher,1984,NonePlacementId
+456,"Here, My Dear",Marvin Gaye,NonePublisher,1978,NonePlacementId
+457,Z,My Morning Jacket,NonePublisher,2005,NonePlacementId
+458,Tumbleweed Connection,Elton John,NonePublisher,1970,NonePlacementId
+459,The Drifters' Golden Hits,The Drifters,NonePublisher,1968,NonePlacementId
+460,Live Through This,Hole,NonePublisher,1994,NonePlacementId
+461,Metal Box,Public Image Ltd.,NonePublisher,1979,NonePlacementId
+462,Document,R.E.M.,NonePublisher,1987,NonePlacementId
+463,Heaven Up Here,Echo and The Bunnymen,NonePublisher,1981,NonePlacementId
+464,Hysteria,Def Leppard,NonePublisher,1987,NonePlacementId
+465,69 Love Songs,The Magnetic Fields,NonePublisher,1999,NonePlacementId
+466,A Rush of Blood to the Head,Coldplay,NonePublisher,2002,NonePlacementId
+467,Tunnel of Love,Bruce Springsteen,NonePublisher,1987,NonePlacementId
+468,The Paul Butterfield Blues Band,The Paul Butterfield Blues Band,NonePublisher,1965,NonePlacementId
+469,The Score,Fugees,NonePublisher,1996,NonePlacementId
+470,Radio,L.L. Cool J,NonePublisher,1985,NonePlacementId
+471,I Want to See the Bright Lights Tonight,Richard & Linda Thompson,NonePublisher,1974,NonePlacementId
+472,Faith,George Michael,NonePublisher,1987,NonePlacementId
+473,The Smiths,The Smiths,NonePublisher,1984,NonePlacementId
+474,Proxima estacion: Esperanza,Manu Chao,NonePublisher,2001,NonePlacementId
+475,Armed Forces,Elvis Costello & The Attractions,NonePublisher,1979,NonePlacementId
+476,Life After Death,The Notorious B.I.G.,NonePublisher,1997,NonePlacementId
+477,Down Every Road,Merle Haggard,NonePublisher,1996,NonePlacementId
+478,All Time Greatest Hits,Loretta Lynn,NonePublisher,2002,NonePlacementId
+479,Maggot Brain,Funkadelic,NonePublisher,1971,NonePlacementId
+480,Only Built 4 Cuban Linx,Raekwon,NonePublisher,1995,NonePlacementId
+481,Voodoo,D'Angelo,NonePublisher,2000,NonePlacementId
+482,Guitar Town,Steve Earle,NonePublisher,1986,NonePlacementId
+483,Entertainment!,Gang of Four,NonePublisher,1979,NonePlacementId
+484,All the Young Dudes,Mott the Hoople,NonePublisher,1972,NonePlacementId
+485,Vitalogy,Pearl Jam,NonePublisher,1994,NonePlacementId
+486,That's the Way of the World,"Earth, Wind & Fire",NonePublisher,1975,NonePlacementId
+487,She's So Unusual,Cyndi Lauper,NonePublisher,1983,NonePlacementId
+488,New Day Rising,Husker Du,NonePublisher,1985,NonePlacementId
+489,Destroyer,KISS,NonePublisher,1976,NonePlacementId
+490,Tres hombres,ZZ Top,NonePublisher,1973,NonePlacementId
+491,Born Under a Bad Sign,Albert King,NonePublisher,1967,NonePlacementId
+492,Touch,Eurythmics,NonePublisher,1983,NonePlacementId
+493,Yankee Hotel Foxtrot,Wilco,NonePublisher,2002,NonePlacementId
+494,Oracular Spectacular,MGMT,NonePublisher,2007,NonePlacementId
+495,Give It Up,Bonnie Raitt,NonePublisher,1972,NonePlacementId
+496,Boz Scaggs,Boz Scaggs,NonePublisher,1969,NonePlacementId
+497,White Blood Cells,The White Stripes,NonePublisher,2001,NonePlacementId
+498,The Stone Roses,The Stone Roses,NonePublisher,1989,NonePlacementId
+499,Live in Cook County Jail,B.B. King,NonePublisher,1971,NonePlacementId
+500,Aquemini,OutKast,NonePublisher,1998,NonePlacementId
