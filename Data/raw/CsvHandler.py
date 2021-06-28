@@ -22,7 +22,7 @@ class CsvHandler:
 if __name__ == '__main__':
     import os
     directory_path = os.getcwd()
-
+    '''
     #Musik
     sourcename = '//albumlist.csv'
     path = directory_path+sourcename
@@ -31,9 +31,9 @@ if __name__ == '__main__':
 
     newdata = []
     for row in readdata:
-        '''
-        id, titel, artist, publisher, release, palcementId
-        '''
+
+        #id, titel, artist, publisher, release, palcementId
+
         
         newdata.append([row[0],row[2],row[3], 'NonePublisher', row[1], 'NonePlacementId'])
 
@@ -50,9 +50,9 @@ if __name__ == '__main__':
 
     newdata = []
     for row in readdata:
-        '''
-        id, titel, artist, publisher, release, palcementId
-        '''
+
+        #id, titel, artist, publisher, release, palcementId
+
         
         newdata.append([row[0],row[1],row[2], 'NonePublisher', 'NoneYear', 'NonePlacementId'])
 
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     path = directory_path+targetname
     CsvHandler().write_csv(path, newdata, encoding='utf-8')
     print('books done')
-    
+    '''
     #Movies
     sourcename = '//tmdb_5000_movies.csv'
     path = directory_path+sourcename
@@ -68,14 +68,13 @@ if __name__ == '__main__':
     readdata = CsvHandler().read_csv(path, encoding='utf-8')
 
     newdata = []
-    for row in readdata:
-        i = 0
-        '''
-        id, titel, artist, publisher, release, palcementId
-        '''
+    for row, i in zip(readdata, range(len(readdata))):
+
+        #id, titel, artist, publisher, release, palcementId
+
+        newdata.append(['id' if i == 0 else i, row[17],'NoneArtist', row[9], row[11], 'NonePlacementId'])
+
         
-        newdata.append([i if not i == 0 else 'id', row[17],'NoneArtist', row[9], row[11], 'NonePlacementId'])
-        i+=1
     targetname = '//movies_copy.csv'
     path = directory_path+targetname
     CsvHandler().write_csv(path, newdata,  encoding='utf-8')
