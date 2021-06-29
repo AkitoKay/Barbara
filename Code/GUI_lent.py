@@ -33,6 +33,7 @@ class Window(ttk.Frame):
         self.checkbuttonOthers.pack(side='right', anchor='n')
         self.checkbuttonAll.pack(side='right', anchor='n')
 
+
         
 if __name__=='__main__':
     root = tk.Tk()
