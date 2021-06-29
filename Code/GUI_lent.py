@@ -7,15 +7,14 @@ class Window(ttk.Frame):
         self._pack = ttk.Frame.pack
 
         #instance your objects here
-        self.label = ttk.Label(self, text='Insert code for lent page here')        
+        self.label = ttk.Label(self, text='Insert code for lent page here')
 
 
-
-        
     def pack(self, **kwargs):
         #call .pack() for instanced objects here
         self._pack(self, kwargs)
         self.label.pack()
+
 
 
         
