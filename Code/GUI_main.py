@@ -8,7 +8,8 @@ class App(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
         self.title("Barbara")
-        self.geometry('800x600')
+        self.geometry('800x650')
+        self.resizable(False, False)
 
         self.tabControl = ttk.Notebook(self)
         self.tab1 = ttk.Frame(self.tabControl)
@@ -21,7 +22,7 @@ class App(tk.Tk):
         self.lent = Lent(self.tab1)
         self.media = Media(self.tab2)
 
-        self.lent.pack()
+        self.lent.pack(expand='true', fill='both')
         self.media.pack()
         
   
