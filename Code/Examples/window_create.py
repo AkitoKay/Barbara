@@ -29,12 +29,12 @@ class ListWidget(tk.Frame):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    text = tk.Text(root)
-    text.window_create('end',window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-
+    text = tk.Text(root, width=100)
     text.pack()
+    for i in range(59):
+        text.window_create('end',window=ListWidget(root).pack())
+    text.window_create('end', window=ListWidget(text).pack())
+    text.window_create('end', window=ListWidget(text).pack())
+    text.window_create('end', window=ListWidget(text).pack())
 
     root.mainloop()
