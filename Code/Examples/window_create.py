@@ -1,4 +1,7 @@
 import tkinter as tk
+#window_create frame inside scrollable
+#root and pack items to/inside frame
+#update scrollbar?
 
 class ListWidget(tk.Frame):
     def __init__(self, root):

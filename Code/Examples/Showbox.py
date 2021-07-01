@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 
 # id, titel, artist, publisher, release, palcementId
@@ -46,7 +47,7 @@ class ShowBox(tk.Frame):
         tk.Frame.__init__(self, root, kwargs)
         self.pack = self.build(self.pack)
 
-        self.box = tk.Canvas(self)
+        self.box = tk.Text(self)
         self.ybar = tk.Scrollbar(self, orient='vertical')
         self.box.config(yscrollcommand=self.ybar.set)
         self.ybar.config(command=self.box.yview)
@@ -61,17 +62,14 @@ class ShowBox(tk.Frame):
 
 
     def insert(self, list_items):
-        for item, index in zip(list_items, range(len(list_items))):
-            instance = item(self.box)
-            self.box.create_window(index, 0, window=instance)
-            #self.box.insert( '\n')
+        self.sc = tk.Frame(self.box)
+        self.sc.pack()
+        self.box.window_create('end', window=self.sc)
+        for item in list_items:
+            instance = item(self.sc)
+
             instance.pack(anchor='w', fill='x')
 
-            self.ybar.destroy()
-            self.ybar = tk.Scrollbar(self)
-            self.box.config(yscrollcommand=self.ybar.set)
-            self.ybar.config(command=self.box.yview)
-            self.ybar.pack(side='right', fill='y')
 
 
 if __name__ == '__main__':
