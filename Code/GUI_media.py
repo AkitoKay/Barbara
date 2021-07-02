@@ -11,34 +11,38 @@ class Window(ttk.Frame):
 
         #instance your objects here
         #self.label = ttk.Label(self, text='Insert code for media page here')
-        self.style = ttk.Style().configure('Frame1.TFrame', background='red')
+        self.style = ttk.Style().configure('Frame1.TFrame', background='red')   #Frame Debug Tool
+        self.rowconfigure(0, weight=1)
+        self.rowconfigure(1, weight=1)
+        self.columnconfigure(0, weight=1)
+        self.columnconfigure(1, weight=1)
         self.cbvar = [tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar()]
         self.topframe1 = ttk.Frame(self)
-        self.topframe2 = ttk.Frame(self, style='Frame1.TFrame')
-        self.centerframe1 = ttk.Frame(self)
-        self.checkbox1 = ttk.Checkbutton(self.topframe1, text='music', variable=self.cbvar[0])
-        self.checkbox2 = ttk.Checkbutton(self.topframe1, text='movie', variable=self.cbvar[1])
-        self.checkbox3 = ttk.Checkbutton(self.topframe1, text='literature', variable=self.cbvar[2])
-        self.checkbox4 = ttk.Checkbutton(self.topframe1, text='misc', variable=self.cbvar[3])
-        self.entry1 = ttk.Entry(self.topframe2)
-        self.entry2 = ttk.Entry(self.topframe2)
-        self.entry3 = ttk.Entry(self.topframe2)
+        self.topframe2 = ttk.Frame(self)
+        self.centerframe1 = ttk.Frame(self, style='Frame1.TFrame')
+        self.checkbox1 = ttk.Checkbutton(self.topframe1, text='Music', variable=self.cbvar[0])
+        self.checkbox2 = ttk.Checkbutton(self.topframe1, text='Movie', variable=self.cbvar[1])
+        self.checkbox3 = ttk.Checkbutton(self.topframe1, text='Literature', variable=self.cbvar[2])
+        self.checkbox4 = ttk.Checkbutton(self.topframe1, text='Misc', variable=self.cbvar[3])
+        self.dropdown = ttk.Combobox(self.topframe2, values=('Author', 'Title', 'Publisher', 'Year', 'Location'), state='readonly')
+        self.entry = ttk.Entry(self.topframe2)
+        self.searchbutton = ttk.Button(self.topframe2, text='Search')
         self.debugg = ttk.Button(self.centerframe1, text='test', command=self.debugger)
 
     def pack(self, **kwargs):
 
         #call .pack() for instanced objects here
         self._pack(self, **kwargs)
-        self.topframe1.grid(row=0, column=0, sticky='W')
-        self.topframe2.grid(row=0, column=1, sticky='W')
-        self.centerframe1.grid(row=1, column=0, columnspan=2)
+        self.topframe1.grid(row=0, column=0, sticky='NESW')
+        self.topframe2.grid(row=0, column=1, sticky='NESW')
+        self.centerframe1.grid(row=1, column=0, columnspan=2, sticky='NESW')
         self.checkbox1.pack(side='top', anchor='w', padx=10)
         self.checkbox2.pack(side='top', anchor='w', padx=10)
         self.checkbox3.pack(side='top', anchor='w', padx=10)
         self.checkbox4.pack(side='top', anchor='w', padx=10)
-        self.entry1.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.entry2.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.entry3.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
+        self.dropdown.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
+        self.entry.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
+        self.searchbutton.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
         self.debugg.pack(side='bottom')
 
     def debugger(self):

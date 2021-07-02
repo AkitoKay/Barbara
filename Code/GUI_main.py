@@ -23,8 +23,8 @@ class App(tk.Tk):
         self.lent = Lent(self.tab1)
         self.media = Media(self.tab2)
 
-        self.lent.pack(expand ='true', fill='both')
-        self.media.pack(expand ='true', fill='both')
+        self.lent.pack(fill='both')
+        self.media.pack(fill='both')
         
   
 if __name__ == '__main__':
