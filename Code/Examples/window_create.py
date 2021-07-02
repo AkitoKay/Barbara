@@ -1,4 +1,7 @@
 import tkinter as tk
+#window_create frame inside scrollable
+#root and pack items to/inside frame
+#update scrollbar?
 
 class ListWidget(tk.Frame):
     def __init__(self, root):
@@ -29,12 +32,12 @@ class ListWidget(tk.Frame):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    text = tk.Text(root)
-    text.window_create('end',window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-    text.window_create('end', window=ListWidget(root).pack())
-
+    text = tk.Text(root, width=100)
     text.pack()
+    for i in range(59):
+        text.window_create('end',window=ListWidget(root).pack())
+    text.window_create('end', window=ListWidget(text).pack())
+    text.window_create('end', window=ListWidget(text).pack())
+    text.window_create('end', window=ListWidget(text).pack())
 
     root.mainloop()

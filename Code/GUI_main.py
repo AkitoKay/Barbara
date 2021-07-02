@@ -1,4 +1,4 @@
-import tkinter as tk                    
+import tkinter as tk
 from tkinter import ttk
 
 from GUI_lent import Window as Lent
@@ -14,7 +14,7 @@ class App(tk.Tk):
         self.tabControl = ttk.Notebook(self)
         self.tab1 = ttk.Frame(self.tabControl)
         self.tab2 = ttk.Frame(self.tabControl)
-  
+
         self.tabControl.add(self.tab1, text ='lent')
         self.tabControl.add(self.tab2, text ='media')
         self.tabControl.pack(expand = 1, fill ="both")
@@ -24,8 +24,8 @@ class App(tk.Tk):
 
         self.lent.pack(expand='true', fill='both')
         self.media.pack()
-        
-  
+
+
 if __name__=='__main__':
     barbara = App()
     barbara.mainloop()
