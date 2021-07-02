@@ -11,9 +11,10 @@ class Window(ttk.Frame):
 
         #instance your objects here
         #self.label = ttk.Label(self, text='Insert code for media page here')
+        self.style = ttk.Style().configure('Frame1.TFrame', background='red')
         self.cbvar = [tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar()]
         self.topframe1 = ttk.Frame(self)
-        self.topframe2 = ttk.Frame(self)
+        self.topframe2 = ttk.Frame(self, style='Frame1.TFrame')
         self.centerframe1 = ttk.Frame(self)
         self.checkbox1 = ttk.Checkbutton(self.topframe1, text='music', variable=self.cbvar[0])
         self.checkbox2 = ttk.Checkbutton(self.topframe1, text='movie', variable=self.cbvar[1])
@@ -22,15 +23,15 @@ class Window(ttk.Frame):
         self.entry1 = ttk.Entry(self.topframe2)
         self.entry2 = ttk.Entry(self.topframe2)
         self.entry3 = ttk.Entry(self.topframe2)
-        self.debugg = ttk.Button(self, text='test', command=self.debugger)
+        self.debugg = ttk.Button(self.centerframe1, text='test', command=self.debugger)
 
     def pack(self, **kwargs):
 
         #call .pack() for instanced objects here
         self._pack(self, **kwargs)
-        #self.label.pack(side ='bottom')
-        self.topframe1.pack(side='left', fill='both', pady = 10)
-        self.topframe2.pack(side='right', fill='both', pady = 10)
+        self.topframe1.grid(row=0, column=0, sticky='W')
+        self.topframe2.grid(row=0, column=1, sticky='W')
+        self.centerframe1.grid(row=1, column=0, columnspan=2)
         self.checkbox1.pack(side='top', anchor='w', padx=10)
         self.checkbox2.pack(side='top', anchor='w', padx=10)
         self.checkbox3.pack(side='top', anchor='w', padx=10)
