@@ -16,17 +16,22 @@ class Window(ttk.Frame):
         self.rowconfigure(1, weight=1)
         self.columnconfigure(0, weight=1)
         self.columnconfigure(1, weight=1)
-        self.cbvar = [tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar()]
+        self.cbvar = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
         self.topframe1 = ttk.Frame(self)
         self.topframe2 = ttk.Frame(self)
         self.centerframe1 = ttk.Frame(self, style='Frame1.TFrame')
-        self.checkbox1 = ttk.Checkbutton(self.topframe1, text='Music', variable=self.cbvar[0])
-        self.checkbox2 = ttk.Checkbutton(self.topframe1, text='Movie', variable=self.cbvar[1])
-        self.checkbox3 = ttk.Checkbutton(self.topframe1, text='Literature', variable=self.cbvar[2])
-        self.checkbox4 = ttk.Checkbutton(self.topframe1, text='Misc', variable=self.cbvar[3])
-        self.dropdown = ttk.Combobox(self.topframe2, values=('Author', 'Title', 'Publisher', 'Year', 'Location'), state='readonly')
+        self.checkbox1 = ttk.Checkbutton(self.topframe1,
+                                         text='Music', variable=self.cbvar[0], onvalue='music', offvalue='')
+        self.checkbox2 = ttk.Checkbutton(self.topframe1,
+                                         text='Movie', variable=self.cbvar[1], onvalue='movie', offvalue='')
+        self.checkbox3 = ttk.Checkbutton(self.topframe1,
+                                         text='Literature', variable=self.cbvar[2], onvalue='literature', offvalue='')
+        self.checkbox4 = ttk.Checkbutton(self.topframe1,
+                                         text='Misc', variable=self.cbvar[3], onvalue='misc', offvalue='')
+        self.dropdown = ttk.Combobox(self.topframe2,
+                                     values=('Author', 'Title', 'Publisher', 'Year', 'Location'), state='readonly')
         self.entry = ttk.Entry(self.topframe2)
-        self.searchbutton = ttk.Button(self.topframe2, text='Search')
+        self.search = ttk.Button(self.topframe2, text='Search')
         self.debugg = ttk.Button(self.centerframe1, text='test', command=self.debugger)
 
     def pack(self, **kwargs):
@@ -42,12 +47,12 @@ class Window(ttk.Frame):
         self.checkbox4.pack(side='top', anchor='w', padx=10)
         self.dropdown.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
         self.entry.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.searchbutton.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
+        self.search.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
         self.debugg.pack(side='bottom')
 
     def debugger(self):
-        #print(self.cbvar[0].get(), self.cbvar[1].get(), self.cbvar[2].get(), self.cbvar[3].get())
-        print(self.entry1.get(), self.entry2.get(), self.entry3.get())
+        print(self.cbvar[0].get(), self.cbvar[1].get(), self.cbvar[2].get(), self.cbvar[3].get())
+        #print(self.entry1.get(), self.entry2.get(), self.entry3.get())
 
 
 
