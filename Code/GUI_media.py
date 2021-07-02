@@ -32,6 +32,7 @@ class Window(ttk.Frame):
                                      values=('Author', 'Title', 'Publisher', 'Year', 'Location'), state='readonly')
         self.entry = ttk.Entry(self.topframe2)
         self.search = ttk.Button(self.topframe2, text='Search')
+        self.showbox = tk.Label(self.centerframe1, text='Hier könnte ihre Showbox stehen!', height=29)
         self.debugg = ttk.Button(self.centerframe1, text='test', command=self.debugger)
 
     def pack(self, **kwargs):
@@ -48,6 +49,7 @@ class Window(ttk.Frame):
         self.dropdown.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
         self.entry.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
         self.search.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
+        self.showbox.pack(side='top', anchor='center', fill='both', padx = 10, pady=10)
         self.debugg.pack(side='bottom')
 
     def debugger(self):
