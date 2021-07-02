@@ -17,9 +17,9 @@ class Window(ttk.Frame):
         self.columnconfigure(0, weight=1)
         self.columnconfigure(1, weight=1)
         self.cbvar = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
-        self.topframe1 = ttk.Frame(self)
-        self.topframe2 = ttk.Frame(self)
-        self.centerframe1 = ttk.Frame(self, style='Frame1.TFrame')
+        self.topframe1 = ttk.Frame(self, padding=5)
+        self.topframe2 = ttk.Frame(self, padding=5)
+        self.centerframe1 = ttk.Frame(self, padding=5, style='Frame1.TFrame')
         self.checkbox1 = ttk.Checkbutton(self.topframe1,
                                          text='Music', variable=self.cbvar[0], onvalue='music', offvalue='')
         self.checkbox2 = ttk.Checkbutton(self.topframe1,
@@ -32,7 +32,7 @@ class Window(ttk.Frame):
                                      values=('Author', 'Title', 'Publisher', 'Year', 'Location'), state='readonly')
         self.entry = ttk.Entry(self.topframe2)
         self.search = ttk.Button(self.topframe2, text='Search')
-        self.showbox = tk.Label(self.centerframe1, text='Hier könnte ihre Showbox stehen!', height=29)
+        self.showbox = tk.Label(self.centerframe1, text='Hier könnte ihre Showbox stehen!', height=28)
         self.debugg = ttk.Button(self.centerframe1, text='test', command=self.debugger)
 
     def pack(self, **kwargs):
@@ -42,18 +42,20 @@ class Window(ttk.Frame):
         self.topframe1.grid(row=0, column=0, sticky='NESW')
         self.topframe2.grid(row=0, column=1, sticky='NESW')
         self.centerframe1.grid(row=1, column=0, columnspan=2, sticky='NESW')
-        self.checkbox1.pack(side='top', anchor='w', padx=10)
-        self.checkbox2.pack(side='top', anchor='w', padx=10)
-        self.checkbox3.pack(side='top', anchor='w', padx=10)
-        self.checkbox4.pack(side='top', anchor='w', padx=10)
-        self.dropdown.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.entry.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.search.pack(side='top', anchor='e', fill='x', padx=10, pady=2)
-        self.showbox.pack(side='top', anchor='center', fill='both', padx = 10, pady=10)
+        self.checkbox1.pack(side='top', anchor='w')
+        self.checkbox2.pack(side='top', anchor='w')
+        self.checkbox3.pack(side='top', anchor='w')
+        self.checkbox4.pack(side='top', anchor='w')
+        self.dropdown.pack(side='top', anchor='e', fill='x', pady=3, padx=1)
+        self.entry.pack(side='top', anchor='e', fill='x', pady=3, padx=1)
+        self.search.pack(side='top', anchor='e', fill='x', pady=3)
+        self.showbox.pack(side='top', anchor='center', fill='both', pady=5)
         self.debugg.pack(side='bottom')
 
     def debugger(self):
-        print(self.cbvar[0].get(), self.cbvar[1].get(), self.cbvar[2].get(), self.cbvar[3].get())
+        for i in self.cbvar:
+            if i.get() != '':
+                print(i.get())
         #print(self.entry1.get(), self.entry2.get(), self.entry3.get())
 
 
