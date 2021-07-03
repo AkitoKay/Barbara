@@ -1,16 +1,17 @@
 import tkinter as tk
 
 
-# id, titel, artist, publisher, release, placement_Id
-
 class ListItem(tk.Frame):
-    def __init__(self, origin, testvarx=0):
-        tk.Frame.__init__(self, origin)
+    def __init__(self, origin, values):
+        super().__init__(origin)
         self.pack = self.build(self.pack)
 
-        self.testvar = testvarx
+        # None-Widget stored data
+        # id, titel, artist, publisher, release, placement_Id
+        self.view_id = values['view_id']
+        self.placement_id = values['placement_id']
 
-        # Container for orga
+        # Container for view-arrangement
         self.left_side = tk.Frame(self)
         self.right_side = tk.Frame(self)
 
@@ -21,17 +22,16 @@ class ListItem(tk.Frame):
         self.label_release = tk.Label(self.left_side, text='Release date:', anchor='w')
 
         # Specific data labels
-        self.data_title = tk.Label(self.right_side, text='some', anchor='w', width=59)
-        self.data_artist = tk.Label(self.right_side, text='text', anchor='w', width=59)
-        self.data_publisher = tk.Label(self.right_side, text='for', anchor='w', width=59)
-        self.data_release = tk.Label(self.right_side, text='instance', anchor='w', width=59)
+        self.data_title = tk.Label(self.right_side, text=values['title'], anchor='w', width=59)
+        self.data_artist = tk.Label(self.right_side, text=values['artist'], anchor='w', width=59)
+        self.data_publisher = tk.Label(self.right_side, text=values['publisher'], anchor='w', width=59)
+        self.data_release = tk.Label(self.right_side, text=values['release'], anchor='w', width=59)
 
-        # add inside-stuff to eventmanager and bind
+        # add and bind inside-stuff to event-manager
         self.retag('showbox', self.label_artist, self.label_title, self.label_release, self.label_publisher,
                    self.data_title, self.data_artist, self.data_release, self.data_publisher)
-        self.bind_class('showbox', '<Button-1>', self.get_details)
 
-
+    #Building functionality here
     def build(self, pack):
         def wrapper(**kwargs):
             pack(kwargs)
@@ -50,22 +50,22 @@ class ListItem(tk.Frame):
 
         return wrapper
 
-    def retag(self, tag, *args):
+    def get_data(self):
+        return (self.view_id,
+                (self.data_title['text'],
+                 self.data_artist['text']))
+
+
+    #bind inside-elements to parent (or maybe the parent to inside...?)
+    @staticmethod
+    def retag(tag, *args):
         for widget in args:
             widget.bindtags((tag,) + widget.bindtags())
 
 
-    def get_details(self, event):
-        # TODO read event.widget data
-        # TODO make db request
-        # TODO build fancy details window or show data in (prepared?) details-container at list_item
-        print(event.widget.master.master.testvar)
-        print(self.testvar) #didn´t work
-        #return 'some'
-
 class ShowBox(tk.Frame):
     def __init__(self, origin, **kwargs):
-        tk.Frame.__init__(self, origin, kwargs)
+        super().__init__(origin, kwargs)
         self.pack = self.build(self.pack)
 
         # tk.Widgets instancing
@@ -92,15 +92,30 @@ class ShowBox(tk.Frame):
         return wrapper
 
     # own functions defined here
-    def insert(self, list_items, i):
+    def get_details(self, event):
+        # TODO read event.widget data
+        # TODO make db request
+        # TODO build fancy details window or show data in (prepared?) details-container at list_item
+        target = event.widget.master.master
+        print(target.get_data())
+        # return 'some'
+
+    def insert(self, data, item=ListItem):
         self.scroll_container.pack()
         self.box.window_create('end', window=self.scroll_container)
 
-        for Item in list_items:
-            instance: ListItem = Item(self.scroll_container, i)
-            #instance.bind('<Button-1>', self.get_details)
+        for row, index in zip(data, range(len(data))):
+            values = {'view_id': index,
+                      'id': row[0],
+                      'title': row[1],
+                      'artist': row[2],
+                      'publisher': row[3],
+                      'release': row[4],
+                      'placement_id': row[5]}
+
+            instance = item(self.scroll_container, values)
             instance.pack(anchor='w', fill='x')
-            i -= 1
+            instance.bind_class('showbox', '<Button-1>', self.get_details)
             self.item_list.append(instance)
 
 
@@ -108,15 +123,21 @@ if __name__ == '__main__':
     root = tk.Tk()
     root.geometry('800x600')
 
-    objects = []
+    one_data = ('1',
+                'Harry Potter and the Half-Blood Prince (Harry Potter  #6)',
+                'J.K. Rowling-Mary GrandPré',
+                'Harding Alvin W.',
+                '2011-10-23',
+                '1')
+
+    more_data = []
+    for i in range(15):
+        more_data.append(one_data)
+
     s = ShowBox(root)
     s.pack()
-    for i in range(15):
-        objects.append(ListItem)
-        # s.box.insert('end', str(i)+'\n')
-        # s.box.window_create('end', window=tk.Label(s.box, text='blablablablablablablablablablablablablablabla').pack())
-        # s.box.configure(scrollregion=s('all'))
-    s.insert(objects, i)
-
+    s.insert(more_data)
+    #help(ShowBox)
 
     root.mainloop()
+
