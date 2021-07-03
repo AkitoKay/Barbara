@@ -51,9 +51,12 @@ class ListItem(tk.Frame):
         return wrapper
 
     def get_data(self):
-        return (self.view_id,
-                (self.data_title['text'],
-                 self.data_artist['text']))
+        return dict(view_id=self.view_id,
+                    title=self.data_title['text'],
+                    artist=self.data_artist['text'],
+                    publisher=self.data_publisher['text'],
+                    release=self.data_release['text'],
+                    placement_id=self.placement_id)
 
 
     #bind inside-elements to parent (or maybe the parent to inside...?)
@@ -76,8 +79,8 @@ class ShowBox(tk.Frame):
         self.box.config(yscrollcommand=self.y_bar.set)
 
         # own Attributes instancing
-        self.item_list = []
-        self.data_dict = {'id': [],
+        self.item_list = []             #store instanced ListItems
+        self.data_dict = {'id': [],     #lists for AutoComplete
                           'titel': [],
                           'artist': [],
                           'release': []}
@@ -93,7 +96,6 @@ class ShowBox(tk.Frame):
 
     # own functions defined here
     def get_details(self, event):
-        # TODO read event.widget data
         # TODO make db request
         # TODO build fancy details window or show data in (prepared?) details-container at list_item
         target = event.widget.master.master
@@ -105,16 +107,16 @@ class ShowBox(tk.Frame):
         self.box.window_create('end', window=self.scroll_container)
 
         for row, index in zip(data, range(len(data))):
-            values = {'view_id': index,
-                      'id': row[0],
-                      'title': row[1],
-                      'artist': row[2],
-                      'publisher': row[3],
-                      'release': row[4],
-                      'placement_id': row[5]}
+            values = dict(view_id=index,
+                          id=row[0],
+                          title=row[1],
+                          artist=row[2],
+                          publisher=row[3],
+                          release=row[4],
+                          placement_id=row[5])
 
             instance = item(self.scroll_container, values)
-            instance.pack(anchor='w', fill='x')
+            instance.pack(anchor='w')
             instance.bind_class('showbox', '<Button-1>', self.get_details)
             self.item_list.append(instance)
 
