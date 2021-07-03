@@ -8,7 +8,6 @@ class ListItem(tk.Frame):
 
         # None-Widget stored data
         # DB_Structure: id, titel, artist, publisher, release, placement_Id
-        self.view_id = values['view_id']
         self.placement_id = values['placement_id']
 
         # Container for view-arrangement
@@ -52,8 +51,7 @@ class ListItem(tk.Frame):
         return wrapper
 
     def get_data(self):
-        return dict(view_id=self.view_id,
-                    title=self.data_title['text'],
+        return dict(title=self.data_title['text'],
                     artist=self.data_artist['text'],
                     publisher=self.data_publisher['text'],
                     release=self.data_release['text'],
@@ -109,9 +107,8 @@ class ShowBox(tk.Frame):
         self.box.window_create('end', window=self.scroll_container)
 
         # make items from data, pass values as dictionary
-        for row, index in zip(data, range(len(data))):
-            values = dict(view_id=index,
-                          id=row[0],
+        for row in data:
+            values = dict(id=row[0],
                           title=row[1],
                           artist=row[2],
                           publisher=row[3],

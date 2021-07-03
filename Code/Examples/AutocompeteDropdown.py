@@ -81,7 +81,8 @@ class AutocompleteCombobox(ttk.Combobox):
 
         def set_completion_list(self, completion_list):
                 """Use our completion list as our drop down selection menu, arrows move through menu."""
-                self._completion_list = sorted(completion_list, key=str.lower) # Work with a sorted list
+                #self._completion_list = sorted(completion_list, key=str.lower) # Work with a sorted list
+                self._completion_list = completion_list  # don´t want it sorted
                 self._hits = []
                 self._hit_index = 0
                 self.position = 0
@@ -144,6 +145,8 @@ def test(test_list):
         # I used a tiling WM with no controls, added a shortcut to quit
         root.bind('<Control-Q>', lambda event=None: root.destroy())
         root.bind('<Control-q>', lambda event=None: root.destroy())
+        root.bind('<Return>', lambda event: print(combo.current()))
+        combo['values']= test_list + ('HalloWelt',)
         root.mainloop()
 
 if __name__ == '__main__':

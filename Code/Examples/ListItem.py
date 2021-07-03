@@ -17,7 +17,7 @@ class ListItem(tk.Frame):
         self.labl_release = tk.Label(self.left_side, text='Release date:', anchor='w')
 
         #Specific data labels
-        self.data_titel = tk.Label(self.right_side,text='some', anchor='w')
+        self.data_titel = tk.Label(self.right_side, text='some', anchor='w')
         self.data_artist = tk.Label(self.right_side, text='text', anchor='w')
         self.data_publisher = tk.Label(self.right_side, text='for', anchor='w')
         self.data_release = tk.Label(self.right_side, text='instance', anchor='w')
