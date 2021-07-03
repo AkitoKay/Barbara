@@ -7,7 +7,7 @@ class ListItem(tk.Frame):
         self.pack = self.build(self.pack)
 
         # None-Widget stored data
-        # id, titel, artist, publisher, release, placement_Id
+        # DB_Structure: id, titel, artist, publisher, release, placement_Id
         self.view_id = values['view_id']
         self.placement_id = values['placement_id']
 
@@ -27,11 +27,12 @@ class ListItem(tk.Frame):
         self.data_publisher = tk.Label(self.right_side, text=values['publisher'], anchor='w', width=59)
         self.data_release = tk.Label(self.right_side, text=values['release'], anchor='w', width=59)
 
-        # add and bind inside-stuff to event-manager
+        # add and bind staff to event-manager
         self.retag('showbox', self.label_artist, self.label_title, self.label_release, self.label_publisher,
                    self.data_title, self.data_artist, self.data_release, self.data_publisher)
+        self.bind_class('showbox', '<Button-1>', self.master.master.master.get_item_details)
 
-    #Building functionality here
+    # Building functionality here
     def build(self, pack):
         def wrapper(**kwargs):
             pack(kwargs)
@@ -58,8 +59,7 @@ class ListItem(tk.Frame):
                     release=self.data_release['text'],
                     placement_id=self.placement_id)
 
-
-    #bind inside-elements to parent (or maybe the parent to inside...?)
+    # bind inside-elements to parent (or maybe the parent to inside...?)
     @staticmethod
     def retag(tag, *args):
         for widget in args:
@@ -73,17 +73,14 @@ class ShowBox(tk.Frame):
 
         # tk.Widgets instancing
         self.box = tk.Text(self, cursor='arrow')
-        self.scroll_container = tk.Frame(self.box)
+        self.scroll_container = None
         self.y_bar = tk.Scrollbar(self, orient='vertical')
         self.y_bar.config(command=self.box.yview)
         self.box.config(yscrollcommand=self.y_bar.set)
 
         # own Attributes instancing
-        self.item_list = []             #store instanced ListItems
-        self.data_dict = {'id': [],     #lists for AutoComplete
-                          'titel': [],
-                          'artist': [],
-                          'release': []}
+        self.item_list = []  # storage for instanced ListItems
+        self.data_dict = self.init_new_acddm_data()  # dict that contains lists (for AutoComplete-DropDown-Menu)
 
     # call tk pack() methods inside wrapper
     def build(self, pack):
@@ -91,21 +88,27 @@ class ShowBox(tk.Frame):
             pack(kwargs)
             self.box.pack(side='left', fill='y')
             self.y_bar.pack(side='right', fill='y')
-
         return wrapper
 
-    # own functions defined here
-    def get_details(self, event):
+    # function triggered by click event
+    def get_item_details(self, event):
         # TODO make db request
-        # TODO build fancy details window or show data in (prepared?) details-container at list_item
+        # TODO build fancy details window OR show data in (prepared?) details-container at list_item
         target = event.widget.master.master
         print(target.get_data())
         # return 'some'
 
-    def insert(self, data, item=ListItem):
+    def fill_window(self, data, item=ListItem):
+        # avoid messed up data
+        if self.item_list:
+            self.clear_window()
+
+        # tk stuff for scrollable container
+        self.scroll_container = tk.Frame(self.box)
         self.scroll_container.pack()
         self.box.window_create('end', window=self.scroll_container)
 
+        # make items from data, pass values as dictionary
         for row, index in zip(data, range(len(data))):
             values = dict(view_id=index,
                           id=row[0],
@@ -114,11 +117,32 @@ class ShowBox(tk.Frame):
                           publisher=row[3],
                           release=row[4],
                           placement_id=row[5])
-
             instance = item(self.scroll_container, values)
             instance.pack(anchor='w')
-            instance.bind_class('showbox', '<Button-1>', self.get_details)
+
+            # prepare lists for ACDDM and store instance reference
+            self.fill_acddm_data(self.data_dict, values)
             self.item_list.append(instance)
+
+    def clear_window(self):
+        self.scroll_container.destroy()
+        self.data_dict = self.init_new_acddm_data()
+        self.item_list = []
+
+    @staticmethod
+    def init_new_acddm_data():
+        data_dict = {'id': [],  # lists for AutoComplete DropDown Menu
+                     'title': [],
+                     'artist': [],
+                     'publisher': [],
+                     'release': [],
+                     'placement_id': []}
+        return data_dict
+
+    @staticmethod
+    def fill_acddm_data(target, value):
+        for t_key, v_key in zip(target.keys(), value.keys()):
+            target[t_key].append(value[v_key])
 
 
 if __name__ == '__main__':
@@ -136,10 +160,18 @@ if __name__ == '__main__':
     for i in range(15):
         more_data.append(one_data)
 
+    t = lambda: s.fill_window(more_data)
+
     s = ShowBox(root)
-    s.pack()
-    s.insert(more_data)
-    #help(ShowBox)
+    t = lambda: s.fill_window(more_data)
+
+    s.pack(side='left')
+    t()
+    #s.insert_items(more_data)
+    # help(ShowBox)
+    tk.Button(root, text='kaputtschlaan', command=s.clear_window).pack()
+    tk.Button(root, text='widderuffbaun', command=lambda: s.fill_window(more_data)).pack()
+    tk.Button(root, text='gugge dict', command=lambda: print(s.data_dict)).pack()
+    tk.Button(root, text='luggi liste', command=lambda: print(s.item_list)).pack()
 
     root.mainloop()
-
