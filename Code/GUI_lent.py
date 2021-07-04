@@ -8,6 +8,13 @@ class Window(ttk.Frame):
         ttk.Frame.__init__(self, root, **kwargs)
         self._pack = ttk.Frame.pack
 
+        #TODO use loop if 'mass'-instancing:
+        #self.check_values = []
+        #for i in range(5):
+        #   self.check_values.append(tk.BooleanVar(root, False))
+        #
+        #-->call as self.check_values[n]    
+        
         self.chkValue1 = tk.BooleanVar()
         self.chkValue1.set(False)
 
@@ -22,20 +29,22 @@ class Window(ttk.Frame):
 
         self.chkValue5 = tk.BooleanVar()
         self.chkValue5.set(False)
-
+        
 
         #instance your objects here
         self.label = ttk.Label(self, text='Insert code for lent page here')
-
+        
         self.showbox = ShowBox(self, command=None)
+        #mayTODO if you use a dict instead list for checkVar you con iterate here too, go for it :)
         self.buttonLent = ttk.Button(self, text='Lent', width=20)
         self.buttonOverdue = ttk.Button(self, text='Overdue', width=20)
         self.checkbuttonMovie = ttk.Checkbutton(self, text='Movies', var=self.chkValue1)
         self.checkbuttonMusic = ttk.Checkbutton(self, text='Music', var=self.chkValue2)
         self.checkbuttonLiterature = ttk.Checkbutton(self, text='Literature', var=self.chkValue3)
+        # TODO 'others' is exactly what for...?
         self.checkbuttonOthers = ttk.Checkbutton(self, text='Others', var=self.chkValue4)
         self.checkbuttonAll = ttk.Checkbutton(self, text='All', var=self.chkValue5)
-
+        
     def pack(self, **kwargs):
         #call .pack() for instanced objects here
         self._pack(self, **kwargs)
@@ -58,7 +67,7 @@ class Window(ttk.Frame):
         
 if __name__=='__main__':
     root = tk.Tk()
-    root.geometry('800x600')
+    root.geometry()
     frame = Window(root)
     frame.pack(expand='true', fill='both')
     root.mainloop()
