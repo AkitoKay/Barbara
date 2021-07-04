@@ -1,7 +1,9 @@
 import tkinter as tk
+import tkinter.ttk as ttk
+from ttkthemes import ThemedTk as Tttk
 
 
-class ListItem(tk.Frame):
+class ListItem(ttk.Frame):
     def __init__(self, origin, values):
         super().__init__(origin)
         self.pack = self.build(self.pack)
@@ -11,20 +13,20 @@ class ListItem(tk.Frame):
         self.placement_id = values['placement_id']
 
         # Container for view-arrangement
-        self.left_side = tk.Frame(self)
-        self.right_side = tk.Frame(self)
+        self.left_side = ttk.Frame(self)
+        self.right_side = ttk.Frame(self)
 
         # Identifier labels
-        self.label_title = tk.Label(self.left_side, text='Titel:', anchor='w')
-        self.label_artist = tk.Label(self.left_side, text='Artist:', anchor='w')
-        self.label_publisher = tk.Label(self.left_side, text='Publisher:', anchor='w')
-        self.label_release = tk.Label(self.left_side, text='Release date:', anchor='w')
+        self.label_title = ttk.Label(self.left_side, text='Titel:', anchor='w')
+        self.label_artist = ttk.Label(self.left_side, text='Artist:', anchor='w')
+        self.label_publisher = ttk.Label(self.left_side, text='Publisher:', anchor='w')
+        self.label_release = ttk.Label(self.left_side, text='Release date:', anchor='w')
 
         # Specific data labels
-        self.data_title = tk.Label(self.right_side, text=values['title'], anchor='w', width=59)
-        self.data_artist = tk.Label(self.right_side, text=values['artist'], anchor='w', width=59)
-        self.data_publisher = tk.Label(self.right_side, text=values['publisher'], anchor='w', width=59)
-        self.data_release = tk.Label(self.right_side, text=values['release'], anchor='w', width=59)
+        self.data_title = ttk.Label(self.right_side, text=values['title'], anchor='w', width=59)
+        self.data_artist = ttk.Label(self.right_side, text=values['artist'], anchor='w', width=59)
+        self.data_publisher = ttk.Label(self.right_side, text=values['publisher'], anchor='w', width=59)
+        self.data_release = ttk.Label(self.right_side, text=values['release'], anchor='w', width=59)
 
         # add and bind staff to event-manager
         self.retag('showbox', self.label_artist, self.label_title, self.label_release, self.label_publisher,
@@ -64,15 +66,15 @@ class ListItem(tk.Frame):
             widget.bindtags((tag,) + widget.bindtags())
 
 
-class ShowBox(tk.Frame):
+class ShowBox(ttk.Frame):
     def __init__(self, origin, **kwargs):
-        super().__init__(origin, kwargs)
+        super().__init__(origin)#, kwargs)
         self.pack = self.build(self.pack)
 
         # tk.Widgets instancing
         self.box = tk.Text(self, cursor='arrow')
         self.scroll_container = None
-        self.y_bar = tk.Scrollbar(self, orient='vertical')
+        self.y_bar = ttk.Scrollbar(self, orient='vertical')
         self.y_bar.config(command=self.box.yview)
         self.box.config(yscrollcommand=self.y_bar.set)
 
@@ -102,7 +104,7 @@ class ShowBox(tk.Frame):
             self.clear_window()
 
         # tk stuff for scrollable container
-        self.scroll_container = tk.Frame(self.box)
+        self.scroll_container = ttk.Frame(self.box)
         self.scroll_container.pack()
         self.box.window_create('end', window=self.scroll_container)
 
@@ -143,7 +145,7 @@ class ShowBox(tk.Frame):
 
 
 if __name__ == '__main__':
-    root = tk.Tk()
+    root = Tttk(theme='arc')
     root.geometry('800x600')
 
     one_data = ('1',
@@ -166,9 +168,9 @@ if __name__ == '__main__':
     t()
     #s.insert_items(more_data)
     # help(ShowBox)
-    tk.Button(root, text='kaputtschlaan', command=s.clear_window).pack()
-    tk.Button(root, text='widderuffbaun', command=lambda: s.fill_window(more_data)).pack()
-    tk.Button(root, text='gugge dict', command=lambda: print(s.data_dict)).pack()
-    tk.Button(root, text='luggi liste', command=lambda: print(s.item_list)).pack()
+    ttk.Button(root, text='kaputtschlaan', command=s.clear_window).pack()
+    ttk.Button(root, text='widderuffbaun', command=lambda: s.fill_window(more_data)).pack()
+    ttk.Button(root, text='gugge dict', command=lambda: print(s.data_dict)).pack()
+    ttk.Button(root, text='luggi liste', command=lambda: print(s.item_list)).pack()
 
     root.mainloop()

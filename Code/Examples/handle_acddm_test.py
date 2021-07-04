@@ -1,7 +1,8 @@
 import tkinter as tk
-from Code.Examples.Showbox import ShowBox
+from Code.Showbox import ShowBox
 from Code.Examples.AutocompeteDropdown import AutocompleteCombobox as Acddm
 
+#from ttkthemes import ThemedTk as Tttk
 '''
 my_dict = {
    'key_one': [1,6,2,3],
@@ -33,6 +34,7 @@ sorted(c.values(), key= lambda x: x[1], reverse=False)
 '''
 
 if __name__ == '__main__':
+
     root = tk.Tk()
     root.geometry('800x600')
 
@@ -82,3 +84,5 @@ if __name__ == '__main__':
 
     acddm.bind('<Return>', lambda event: print(acddm.current()))
     root.mainloop()
+
+    '''tk.Text.see ?'''

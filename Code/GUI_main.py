@@ -1,12 +1,13 @@
-import tkinter as tk
 from tkinter import ttk
+from ttkthemes import ThemedTk as Tttk
 
 from GUI_lent import Window as Lent
 from GUI_media import Window as Media
 
-class App(tk.Tk):
-    def __init__(self):
-        tk.Tk.__init__(self)
+
+class App(Tttk):
+    def __init__(self, theme):
+        super().__init__(theme=theme)
         self.title("Barbara")
         self.geometry('800x650')
         self.resizable(False, False)
@@ -26,6 +27,12 @@ class App(tk.Tk):
         self.media.pack()
 
 
+
+
 if __name__=='__main__':
-    barbara = App()
-    barbara.mainloop()
+    from ttkthemes import THEMES as themes
+    for theme in themes:
+        print('this is theme: ', theme)
+
+        barbara = App(theme)
+        barbara.mainloop()

@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from Code.Showbox import ShowBox
 
 class Window(ttk.Frame):
     def __init__(self, root):
@@ -7,8 +8,8 @@ class Window(ttk.Frame):
         self._pack = ttk.Frame.pack
 
         #instance your objects here
-        self.label = ttk.Label(self, text='Insert code for media page here')        
-
+        self.label = ttk.Label(self, text='Insert code for media page here', theme='black')
+        s = ShowBox(self).pack()
 
 
         
