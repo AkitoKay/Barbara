@@ -81,4 +81,5 @@ if __name__ == '__main__':
     tk.Button(root, text='luggi liste', command=lambda: print(s.item_list)).pack()
 
     acddm.bind('<Return>', lambda event: print(acddm.current()))
+    acddm.bind('<Escape>', lambda event: delete_stuff())
     root.mainloop()
