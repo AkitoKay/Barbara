@@ -1,6 +1,8 @@
-__pycache__/
-Code/.DS_Store
-.DS_Store
-.idea
+*$py.class
+**/.DS_Store
+**/.idea
+**/__pycache__/
 *.autosave
+*.py[cod]
+*.so
 *~
