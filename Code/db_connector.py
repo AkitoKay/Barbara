@@ -1,24 +1,58 @@
 import mariadb
-#https://mariadb.com/de/resources/blog/how-to-connect-python-programs-to-mariadb/
+# import mysql.connector
+import configparser
+
+
+class params:
+    def __init__(self):
+        self.config = configparser.ConfigParser()
+        self.config.read("barbara.conf")
+
+    def user(self):
+        self.user = self.config["server"]["user"]
+
+    def password(self):
+        self.password = self.config["server"]["password"]
+
+    def host(self):
+        self.host = self.config["server"]["host"]
+
+    def port(self):
+        self.port = self.config["server"]["port"]
+
+    def database(self):
+        self.database = self.config["server"]["database"]
+
+    # def test(self):
+    #     for i in ["user", "password", "host", "port", "database"]:
+    #         if not config["server"][i]:
+    #             # print("% not set", i)
+    #             print("Config item is not set:", i)
+
 
 class DB:
-    _user = '#TODO'
-    _password = '#TODO'
-    _host = '#TODO'
-    _port = '#TODO'
-    _database = '#TODO'
+
+    _user = params.user
+    _password = params.password
+    _host = params.host
+    _port = params.port
+    _database = params.database
 
     @classmethod
     def request(cls, statement, values):
         try:
-            with mariadb.connect(cls._user,
-                                 cls._password,
-                                 cls._host, cls._port,
-                                 cls._database) as conn, conn.cursor() as cursor:
+            with mariadb.connect(
+                    cls._user,
+                    cls._password,
+                    cls._host,
+                    cls._port,
+                    cls._database
+            ) as conn, conn.cursor() as cursor:
                 cursor.execute(statement, values)
                 return cursor
         except mariadb.Error as e:
             print(f"Error: {e}")
+
 
     @classmethod
     def get_tes(cls):
@@ -34,3 +68,8 @@ class DB:
 if __name__ == '__main__':
     DB.request('Hallo Welt!', (1,))
 
+
+if __name__ == "__main__":
+    # test_connection()
+    # DB.request('Hallo Welt!', (1,))
+    DB.request("SELECT * FROM literature", (1,))
