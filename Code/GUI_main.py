@@ -22,7 +22,7 @@ class App(tk.Tk):
         self.lent = Lent(self.tab1)
         self.media = Media(self.tab2)
 
-        self.lent.pack(expand='true', fill='both')
+        self.lent.pack(fill='x', anchor='s')
         self.media.pack()
 
 
