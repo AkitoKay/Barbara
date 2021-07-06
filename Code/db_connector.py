@@ -1,16 +1,27 @@
 import mariadb
+# import mysql.connector
 import configparser
 
 
-class config:
+class params:
     def __init__(self):
         self.config = configparser.ConfigParser()
         self.config.read("barbara.conf")
-        self.user = config["server"]["user"]
-        self.password = config["server"]["password"]
-        self.host = config["server"]["host"]
-        self.port = config["server"]["port"]
-        self.database = config["server"]["database"]
+
+    def user(self):
+        self.user = self.config["server"]["user"]
+
+    def password(self):
+        self.password = self.config["server"]["password"]
+
+    def host(self):
+        self.host = self.config["server"]["host"]
+
+    def port(self):
+        self.port = self.config["server"]["port"]
+
+    def database(self):
+        self.database = self.config["server"]["database"]
 
     # def test(self):
     #     for i in ["user", "password", "host", "port", "database"]:
@@ -20,11 +31,12 @@ class config:
 
 
 class DB:
-    _user = config.config.user
-    _password = config.config.password
-    _host = config.config.host
-    _port = config.config.port
-    _database = config.config.database
+
+    _user = params.user
+    _password = params.password
+    _host = params.host
+    _port = params.port
+    _database = params.database
 
     @classmethod
     def request(cls, statement, values):
@@ -32,7 +44,8 @@ class DB:
             with mariadb.connect(
                     cls._user,
                     cls._password,
-                    cls._host, cls._port,
+                    cls._host,
+                    cls._port,
                     cls._database
             ) as conn, conn.cursor() as cursor:
                 cursor.execute(statement, values)
@@ -41,8 +54,7 @@ class DB:
             print(f"Error: {e}")
 
 
-if __name__ == '__main__':
-    DB.request('Hallo Welt!', (1,))
-
-
-#https://mariadb.com/de/resources/blog/how-to-connect-python-programs-to-mariadb/
+if __name__ == "__main__":
+    # test_connection()
+    # DB.request('Hallo Welt!', (1,))
+    DB.request("SELECT * FROM literature", (1,))
