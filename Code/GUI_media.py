@@ -2,6 +2,7 @@ import tkinter as tk
 from functools import partial
 from tkinter import ttk
 from Barbara.Code.Examples.Showbox import ShowBox
+from Code.Parameter import Parameter as Para
 
 
 class Window(ttk.Frame):
@@ -10,30 +11,37 @@ class Window(ttk.Frame):
         super().__init__(root, **kwargs)
         self.pack = self.build(self.pack)
 
-        self.check_values = []
-        for i in range(3):
-            self.check_values.append(tk.BooleanVar())
-
-        self.choice = tk.StringVar()
-
         self.left_side = ttk.Frame(self)
         self.right_side = ttk.Frame(self)
 
 
+        self.check_values = dict(checkvar=[], checkbutton=[])
+        for key in Para.media_tabel_identifier.keys():
+            var = tk.StringVar()
+            cbutton = ttk.Checkbutton(self.left_side, text=key, variable=var, onvalue=key, offvalue=None)
+            self.check_values['checkvar'].append(var)
+            self.check_values['checkbutton'].append(cbutton)
 
-        self.cb_music = ttk.Checkbutton(self.left_side,
-                                         text='Music', variable=self.check_values[0])
-        self.cb_movie = ttk.Checkbutton(self.left_side,
-                                         text='Movie', variable=self.check_values[1])
-        self.cb_literature = ttk.Checkbutton(self.left_side,
-                                        text='Literature', variable=self.check_values[2])
-        values = ('Author', 'Title', 'Publisher', 'Year', 'Location')
+        self.choice = tk.StringVar()
+        values = Para.media_search_columns.keys()
         self.options = ttk.OptionMenu(self.right_side, self.choice, values[0], *values
                                       )
 
         self.entry = ttk.Entry(self.right_side)
-        self.search = ttk.Button(self.right_side, text='Search')
+        self.search = ttk.Button(self.right_side, text='Suche')
         self.showbox = ShowBox(self)
+
+
+    def search(self):
+        term = self.entry.get()
+        column = self.choice.get()
+        for cb in self.check_values['check_var']:
+            if cb.get():
+                pass #make sql statement here, cb.get returns mediatype
+
+                #call showbox.fill_window inside loop
+
+
 
 
     def build(self, pack):
@@ -44,9 +52,8 @@ class Window(ttk.Frame):
             self.right_side.pack(side='right')
             self.left_side.pack(side='left')
 
-            self.cb_music.pack(anchor='w')
-            self.cb_literature.pack(anchor='w')
-            self.cb_movie.pack(anchor='w')
+            for item in self.check_values['checkbutton']:
+                item.pack(anchor='w')
 
             self.options.pack(anchor='e', fill='x', pady=3, padx=1)
             self.entry.pack(anchor='e', fill='x', pady=3, padx=1)

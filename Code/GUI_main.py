@@ -15,9 +15,9 @@ class App(tk.Tk):
         self.tab1 = ttk.Frame(self.tabControl)
         self.tab2 = ttk.Frame(self.tabControl)
 
-        self.tabControl.add(self.tab1, text ='lent')
-        self.tabControl.add(self.tab2, text ='media')
-        self.tabControl.pack(expand = 1, fill ="both")
+        self.tabControl.add(self.tab1, text='lent')
+        self.tabControl.add(self.tab2, text='media')
+        self.tabControl.pack(expand=1, fill="both")
 
         self.lent = Lent(self.tab1)
         self.media = Media(self.tab2)
