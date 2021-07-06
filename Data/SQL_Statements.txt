@@ -1,0 +1,22 @@
+# BOOKS, MOVIES, MUSIC
+
+SELECT titel, author, publisher, published 
+FROM literature WHERE "HIER_VARIABLE_1_EINFÜGEN" LIKE "%HIER_VARIABLE_2_EINFÜGEN%";
+VAR_1 => titel, author, publisher, published
+VAR_2 => Suchkriterium
+
+# DETAIL SUCHE
+
+SELECT m.titel, m.author, m.publisher, m.published, m.id_shelf AS shelf, s.id_floor AS floor, t.type AS type
+FROM music AS m JOIN shelf s ON m.id_shelf = s.id WHERE m."HIER_VARIABLE_1_EINFÜGEN"  LIKE "%HIER_VARIABLE_2_EINFÜGEN%";
+VAR_1 => titel, author, publisher, published
+VAR_2 => Suchkriterium
+
+########################################################################################################
+# SUCHE Music NACH Author, füge SHELF, FLOOR, TYPE hinzu
+
+SELECT m.titel, m.author, m.publisher, m.published, m.id_shelf AS shelf, s.id_floor AS floor, t.type AS type 
+FROM music AS m JOIN shelf s ON m.id_shelf = s.id JOIN media_type t ON t.type = t.type 
+WHERE m.author  LIKE "%Beatles%" AND t.type = "Music"  ;
+
+
