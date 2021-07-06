@@ -3,6 +3,7 @@
 **/.idea
 **/__pycache__/
 *.autosave
+*.conf
 *.py[cod]
 *.so
 *~
