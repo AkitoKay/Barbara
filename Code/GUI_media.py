@@ -8,7 +8,7 @@ class Window(ttk.Frame):
         self._pack = ttk.Frame.pack
 
         #instance your objects here
-        self.label = ttk.Label(self, text='Insert code for media page here', theme='black')
+        self.label = ttk.Label(self, text='Insert code for media page here')
         s = ShowBox(self).pack()
 
 
