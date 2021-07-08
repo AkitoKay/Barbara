@@ -1,4 +1,4 @@
-import mariadb
+#import mariadb
 # import mysql.connector
 import configparser
 
@@ -72,4 +72,4 @@ if __name__ == '__main__':
 if __name__ == "__main__":
     # test_connection()
     # DB.request('Hallo Welt!', (1,))
-    DB.request("SELECT * FROM literature", (1,))
+    #DB.request("SELECT * FROM literature", (1,))

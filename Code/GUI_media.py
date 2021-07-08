@@ -1,7 +1,7 @@
 import tkinter as tk
 from functools import partial
 from tkinter import ttk
-from Barbara.Code.Examples.Showbox import ShowBox
+from Code.Examples.Showbox import ShowBox
 from Code.Lexicon import Parameter as Para
 
 
@@ -23,22 +23,21 @@ class Window(ttk.Frame):
             self.check_values['checkbutton'].append(cbutton)
 
         self.choice = tk.StringVar()
-        values = Para.media_search_columns.keys()
-        self.options = ttk.OptionMenu(self.right_side, self.choice, values[0], *values
-                                      )
+        values = list(Para.media_search_columns.keys())
+        self.options = ttk.OptionMenu(self.right_side, self.choice, values[0], *values)
 
         self.entry = ttk.Entry(self.right_side)
-        self.search = ttk.Button(self.right_side, text='Suche')
+        self.search = ttk.Button(self.right_side, text='Suche', command=self.search)
         self.showbox = ShowBox(self)
 
 
     def search(self):
         term = self.entry.get()
         column = self.choice.get()
-        for cb in self.check_values['check_var']:
+        for cb in self.check_values['checkvar']:
             if cb.get():
-                pass #make sql statement here, cb.get returns mediatype
-
+                 # TODO make sql statement here, cb.get returns mediatype
+                print(cb.get(), column, term)# TODO translate to db_talk by Lexicon.py
                 #call showbox.fill_window inside loop
 
 

@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.ttk as ttk
-from Barbara.Code.Examples.Showbox import ShowBox
-from Barbara.Code.db_connector import DB
+from Code.Examples.Showbox import ShowBox
+#from Code.db_connector import DB
 
 class Window(ttk.Frame):
     def __init__(self, root, **kwargs):
