@@ -3,6 +3,33 @@ from Code.Examples.Showbox import ShowBox
 from Code.Examples.AutocompeteDropdown import AutocompleteCombobox as Acddm
 
 '''
+>>> def q(*args:dict, **kwargs):
+	for a in args:
+		print(a)
+	for k in kwargs:
+		print(k, kwargs[k])
+
+		
+>>> q('gzg')
+gzg
+>>> q({'K'='gzg'))
+SyntaxError: invalid syntax
+>>> q({'K':'gzg'))
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+>>> q({'K':'gzg'})
+{'K': 'gzg'}
+>>> def q(*args:dict, **kwargs):
+	for a in args:
+		print(a)
+	for k,v in kwargs.items():
+		print(k, v)
+
+		
+>>> q(d='hallo')
+d hallo
+
+
+
 my_dict = {
    'key_one': [1,6,2,3],
    'key_two': [4,1,9,7],

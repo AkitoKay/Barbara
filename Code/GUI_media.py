@@ -2,7 +2,7 @@ import tkinter as tk
 from functools import partial
 from tkinter import ttk
 from Barbara.Code.Examples.Showbox import ShowBox
-from Code.Parameter import Parameter as Para
+from Code.Lexicon import Parameter as Para
 
 
 class Window(ttk.Frame):
