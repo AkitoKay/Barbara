@@ -37,7 +37,7 @@ class Window(ttk.Frame):
         for cb in self.check_values['checkvar']:
             if cb.get():
                  # TODO make sql statement here, cb.get returns mediatype
-                print(cb.get(), column, term)# TODO translate to db_talk by Lexicon.py
+                print(cb.get(), column, term)# TODO translate to db_talk by Lexicon.py or maybe while instancing
                 #call showbox.fill_window inside loop
 
 
