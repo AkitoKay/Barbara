@@ -16,7 +16,26 @@ VAR_2 => Suchkriterium
 # SUCHE Music NACH Author, füge SHELF, FLOOR, TYPE hinzu
 
 SELECT m.titel, m.author, m.publisher, m.published, m.id_shelf AS shelf, s.id_floor AS floor, t.type AS type 
-FROM music AS m JOIN shelf s ON m.id_shelf = s.id JOIN media_type t ON t.type = t.type 
-WHERE m.author  LIKE "%Beatles%" AND t.type = "Music"  ;
+FROM music AS m 
+JOIN shelf s ON m.id_shelf = s.id 
+JOIN media_type t ON t.type = t.type 
+WHERE m.author LIKE "%Beatles%" AND t.type = "Music";
 
+
+# SUCHE Lending
+SELECT m.titel, m.author, m.publisher, c.firstname, c.name, l.date_output 
+FROM lending AS l 
+JOIN customer c ON c.id = l.id_customer 
+JOIN music m ON m.id = l.id_media 
+WHERE l.id = 1;
+
+
+#
+SELECT m.titel, m.author, m.publisher, n.titel, n.author, n.publisher, b.titel, b.author, b.publisher, c.firstname, c.name, l.date_output 
+FROM lending AS l 
+JOIN customer c ON c.id = l.id_customer 
+JOIN music m ON m.id = l.id_media 
+JOIN literature n ON n.id = l.id_media
+JOIN movies b ON b.id = l.id_media
+WHERE l.id_type = 1;
 
