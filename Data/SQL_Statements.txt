@@ -21,6 +21,20 @@ JOIN shelf s ON m.id_shelf = s.id
 JOIN media_type t ON t.type = t.type 
 WHERE m.author LIKE "%Beatles%" AND t.type = "Music";
 
+# DiFF Datum (Ausleihen)
+
+SELECT
+u.type type_media,
+bk.titel book_name,
+bk.author book_author,
+s.id customer_id,
+s.firstname customer_name,
+DATEDIFF(bi.date_input,bi.date_output) AS days_lending
+FROM lending bi
+JOIN literature bk ON bi.id = bk.id
+JOIN customer s ON bi.id = s.id
+JOIN media_type u ON u.id = bi.id
+
 
 # SUCHE Lending
 SELECT m.titel, m.author, m.publisher, c.firstname, c.name, l.date_output 
