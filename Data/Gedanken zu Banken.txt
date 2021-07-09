@@ -1,0 +1,98 @@
+{*key: value}:Dictionary, key=gui_language, value=sql_language
+
+values = string
+values = value from key for key in sortet [*key] in dict joined with ','
+table = value from key in dict
+column = value from key in dict
+term = entry_input
+==> SELECT <values> FROM <Table> WHERE <column> IS LIKE (term)
+
+table_a = value from key in dict_a
+table_b = value from key in dict_b
+column_A = column_B = value from key in dict
+column_a = Table_a + '.' + column_A
+column_b = Table_b + '.' + column_B
+term = entry_input
+values_a = table_a + '.' + value from key for key in sortet [*key] in dict_a joined with ','
+values_b = table_b + '.' + value from key for key in sortet [*key] in dict_b joined with ','
+values = values_a + ',' + values_b
+==> SELECT <values> FROM <Table_a> JOIN <Table_b> ON <column_a> = <column_b> WHERE <column> IS LIKE (term)
+
+
+----#	Mögliche anfragen	#----
+
+Kundendaten (static): 	
+SELECT FROM
+Tabelle , Werte
+-------------------------------------
+
+Überfällige:		
+
+SELECT FROM JOIN WHERE AND WHERE
+Tabelle1, Tabelle2, Werte aus T1, Werte aus T2, Join-Spalte1, Join-Spalte2, 
+Such-Spalte=DatumAusgeliehen, 
+Suchbegriff = Differenz DatumAusgeliehen - DatumHeute AND DatumZurück = None
+# aber: Tabelle2 bis zu 3 verschiedene... wie? 
+# Join ON mediatyp Join ON mediatyp Join ON mediatyp Where AND Where? 
+#... wobei die mediatypen in mediumtabelle erst generiert werden müssen (on the fly)
+## 3 Suchanfragen mit Py mit extra Where für Mediatyp
+
+###soetwas in der art wäre wohl möglich
+SELECT E.CaseNum, E.FileNum, E.ActivityNum, E.Grade, V.Score from Evaluation E
+INNER JOIN Value V
+ON E.CaseNum = V.CaseNum AND
+    E.FileNum = V.FileNum AND 
+    E.ActivityNum = V.ActivityNum
+
+# muss noch markus sein werte-generieren-trick mit rein:
+# t2 -3 = mediatable,  mt = mediatype
+SELECT v1,v2,v3,v4 FROM t1 JOIN t2 ON t1.mt = t2.mt AND t1.id = t2.id 
+			   JOIN t3 ON t1.mt = t3.mt AND t1.id = t3.id  
+			   JOIN t4 ON t1.mt = t4.mt AND t1.id = t4.id 
+			   WHERE RückgabeDate = None AND 
+			   WHERE heuteDate - t1.outDate > Ausleihzeit 
+/OR/
+
+SELECT FROM WHERE AND WHERE,  Begriff
+Tabelle, Werte, Spalte . nachfolgend Begriff(Suchbegriff=id) 
+#...nee is auch doof, jeder gefundene Eintrag in T1 wäre 1ne Suchanfrage
+## vll doch: nach mediumtyp ordnen, dann 3 mal Begriff(Suchbegriff=id) Where id OR id OR id OR ...
+### nope, is doof
+------------------------------------------
+
+Ausgeliehene: 		
+
+SELECT FROM JOIN WHERE
+/OR/ 
+SELECT FROM WHERE,  Begriff
+#ähnlich wie oben
+------------------------------------------
+
+Begriff:
+			
+SELECT v1, v2, v3, v4 FROM t1 JOIN t2 ON t1.x = t2.x 
+			      JOIN t3 ON t2.y = t3.y
+			      JOIN t4 ON t1.z = t4.z 
+			      WHERE heuteDate - t4.outDate > Ausleihfrist AND 
+			      WHERE t1.w IS LIKE %'term'%
+/OR/ 
+SELECT FROM WHERE, Details_lend, Details_position
+
+#Hier Tabelle 1 bis zu drei verschiedene
+# mit view 
+------------------------------------------
+ 
+(Details_lend):		
+Select From Where And Where
+
+(Details_position)	
+Select From Join Where
+
+neue Ausleihe		
+Insert 
+
+Ausleihe ändern		
+Update Where
+
+
+
