@@ -113,7 +113,7 @@ class ShowBox(tk.Frame):
                           title=row[1],
                           artist=row[2],
                           publisher=row[3],
-                          release=row[4])
+                          release=row[4],
                           placement_id=row[5])
             instance = item(self.scroll_container, values)
             instance.pack(anchor='w')
