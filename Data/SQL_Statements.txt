@@ -30,7 +30,7 @@ bi.date_input,
 bi.date_output,
 DATEDIFF(bi.date_input,bi.date_output) AS days_lending
 FROM lending bi
-RIGHT JOIN literature bk ON bi.id = bk.id AND bi.type = 2
+RIGHT JOIN literature bk ON bi.id = bk.id AND bi.id_type = 2
 where bk.titel LIKE '%Harry%'
 
 
@@ -73,7 +73,7 @@ l.id = b.id AND l.id_type = 1;
 
 
 # INSERT
-INSERT INTO literature (id_media, id_type, id_customer, date_output, date_input) VALUES (1337, 1, 99, '2020-12-31', NULL);
+INSERT INTO lending(id_media, id_type, id_customer, date_output, date_input) VALUES (1337, 1, 99, '2020-12-31', NULL);
 
 # UPDATE
 UPDATE lending SET date_input = '2021-07-13' WHERE id_media = 256 AND id_customer = 99;
