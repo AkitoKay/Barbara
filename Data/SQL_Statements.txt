@@ -53,3 +53,17 @@ JOIN literature n ON n.id = l.id_media
 JOIN movies b ON b.id = l.id_media
 WHERE l.id_type = 1;
 
+
+# Trash
+SELECT m.titel, m.author,
+n.titel, n.author, 
+b.titel, b.author, 
+c.firstname, c.name, l.date_output 
+FROM lending AS l 
+JOIN customer c ON c.id = l.id_customer 
+JOIN music m ON m.id = l.id_media AND l.id_type = 2 
+JOIN literature n ON n.id = l.id_media AND l.id_type = 1
+JOIN movies b ON b.id = l.id_media AND l.id_type = 3
+WHERE l.id = m.id AND l.id_type = 1 OR
+l.id = n.id AND l.id_type = 1 OR
+l.id = b.id AND l.id_type = 1;

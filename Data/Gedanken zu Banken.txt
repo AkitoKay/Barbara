@@ -93,8 +93,3 @@ Insert
 
 Ausleihe ändern		
 Update Where
-
-
-
-
-
