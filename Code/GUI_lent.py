@@ -1,12 +1,12 @@
 import tkinter as tk
-<<<<<<< Updated upstream
+#<<<<<<< Updated upstream
 from tkinter import ttk
 
-=======
+#=======
 import tkinter.ttk as ttk
 from Examples.Showbox import ShowBox
 #from Code.db_connector import DB
->>>>>>> Stashed changes
+#>>>>>>> Stashed changes
 
 class Window(ttk.Frame):
 

@@ -1,13 +1,13 @@
 import tkinter as tk
 from functools import partial
 from tkinter import ttk
-<<<<<<< Updated upstream
+#<<<<<<< Updated upstream
 import Showbox as Sb
 import mysql.connector
-=======
+#=======
 from Examples.Showbox import ShowBox
 from Lexicon import Parameter as Para
->>>>>>> Stashed changes
+#>>>>>>> Stashed changes
 
 
 class Window(ttk.Frame):
