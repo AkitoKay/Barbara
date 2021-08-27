@@ -1,4 +1,6 @@
 import tkinter as tk
+import tkinter.ttk as ttk
+import mysql.connector
 
 
 class ListItem(tk.Frame):
@@ -21,6 +23,8 @@ class ListItem(tk.Frame):
         self.label_release = tk.Label(self.left_side, text='Release date:', anchor='w')
 
         # Specific data labels
+        self.data_id = values['id']
+        self.data_mediatype = values['mediatype']
         self.data_title = tk.Label(self.right_side, text=values['title'], anchor='w', width=59)
         self.data_artist = tk.Label(self.right_side, text=values['artist'], anchor='w', width=59)
         self.data_publisher = tk.Label(self.right_side, text=values['publisher'], anchor='w', width=59)
@@ -51,11 +55,58 @@ class ListItem(tk.Frame):
         return wrapper
 
     def get_data(self):
-        return dict(title=self.data_title['text'],
+        db = mysql.connector.connect(user='python', password='', host='192.168.8.15', database='bibo')
+        cursor = db.cursor()
+        typo = None
+        if self.data_mediatype == 'literature':
+            typo = 1
+        if self.data_mediatype == 'music':
+            typo = 2
+        if self.data_mediatype == 'movies':
+            typo = 3
+        query = ('SELECT c.firstname, c.name, l.date_input, l.date_output '
+                 'FROM lending AS l '
+                 'JOIN customer c ON c.id = l.id_customer '
+                 'WHERE l.id_media = %s AND l.id_type = %s;')
+        cursor.execute(query, (self.data_id, typo))
+        data = cursor.fetchone()
+        status = ''
+        if (data is None) or (data[2] is not None):
+            status = 'available'
+        else:
+            status = 'lent to ' + data[1] + ', ' + data[0]
+
+
+        self.generate_toplevel(
+            self.data_title['text'],
+            self.data_artist['text'],
+            self.data_publisher['text'],
+            self.data_release['text'],
+            status
+        )
+
+        cursor.close()
+        db.close()
+
+        """return dict(title=self.data_title['text'],
                     artist=self.data_artist['text'],
                     publisher=self.data_publisher['text'],
                     release=self.data_release['text'],
-                    placement_id=self.placement_id)
+                    placement_id=self.placement_id)"""
+
+    def generate_toplevel(self, title, artist, publisher, release, lent):
+        toplevel = tk.Toplevel()
+        toplevel.geometry("400x250")
+        toplevel.title("Details")
+        toplevel.resizable(False, False)
+        toplevel.grab_set()
+        ttk.Label(toplevel, text='Title:\n' + title).pack(pady=3, padx=10, fill='both', anchor='w')
+        ttk.Label(toplevel, text='Artist:\n' + artist).pack(pady=3, padx=10, fill='both', anchor='w')
+        ttk.Label(toplevel, text='Pubisher:\n' + publisher).pack(pady=3, padx=10, fill='both', anchor='w')
+        ttk.Label(toplevel, text='Release:\n' + release).pack(pady=3, padx=10, fill='both', anchor='w')
+        ttk.Label(toplevel, text='Status:\n' + lent).pack(pady=3, padx=10, fill='both', anchor='w')
+        toplevel.mainloop()
+        return
 
     # bind inside-elements to parent (or maybe the parent to inside...?)
     @staticmethod
@@ -99,6 +150,8 @@ class ShowBox(tk.Frame):
 
     def fill_window(self, data, item=ListItem):
         # avoid messed up data
+        if data is None:
+            return
         if self.item_list:
             self.clear_window()
 
@@ -114,7 +167,8 @@ class ShowBox(tk.Frame):
                           artist=row[2],
                           publisher=row[3],
                           release=row[4],
-                          placement_id=row[5])
+                          placement_id=row[5],
+                          mediatype=row[6])
             instance = item(self.scroll_container, values)
             instance.pack(anchor='w')
 
